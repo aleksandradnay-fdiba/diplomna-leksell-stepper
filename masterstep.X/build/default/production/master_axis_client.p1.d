@@ -1,0 +1,19 @@
+build/default/production/master_axis_client.p1:  \
+master_axis_client.c  \
+master_axis_client.h  \
+can_protocol.h  \
+mcc_generated_files/ecan.h  \
+slave_node.h  \
+axis.h  \
+motor.h  \
+encoder.h  \
+uart_print.h  \
+mcc_generated_files/mcc.h  \
+mcc_generated_files/device_config.h  \
+mcc_generated_files/pin_manager.h  \
+mcc_generated_files/interrupt_manager.h  \
+mcc_generated_files/pwm6.h  \
+mcc_generated_files/tmr2.h  \
+mcc_generated_files/pwm5.h  \
+mcc_generated_files/tmr0.h  \
+mcc_generated_files/uart1.h 

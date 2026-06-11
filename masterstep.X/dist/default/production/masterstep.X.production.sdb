@@ -1,0 +1,2184 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F26K83 ]
+[d frameptr 16353 ]
+"96 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/tmr2.c
+[e E22756 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR2_OS_STARTS_TMRON_ERSHIGH 22
+TMR2_OS_STARTS_TMRON_ERSLOW 23
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"102
+[e E22779 . `uc
+TMR2_T2INPPS 0
+TMR2_RESERVED 1
+TMR2_T4POSTSCALED 2
+TMR2_T6POSTSCALED 3
+TMR2_CCP1_OUT 4
+TMR2_CCP2_OUT 5
+TMR2_CCP3_OUT 6
+TMR2_CCP4_OUT 7
+TMR2_PWM5_OUT 8
+TMR2_PWM6_OUT 9
+TMR2_PWM7_OUT 10
+TMR2_PWM8_OUT 11
+TMR2_RESERVED_2 12
+TMR2_RESERVED_3 13
+TMR2_C1_OUT_SYNC 14
+TMR2_C2_OUT_SYNC 15
+TMR2_ZCD_OUTPUT 16
+TMR2_CLC1_OUT 17
+TMR2_CLC2_OUT 18
+TMR2_CLC3_OUT 19
+TMR2_CLC4_OUT 20
+TMR2_UART1_RX_EDGE 21
+TMR2_UART1_TX_EDGE 22
+TMR2_UART2_RX_EDGE 23
+TMR2_UART2_TX_EDGE 24
+]
+"27 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\main.c
+[e E23500 . `uc
+AXIS_NODE_CMD_NONE 0
+AXIS_NODE_CMD_HOME 1
+AXIS_NODE_CMD_STOP 2
+AXIS_NODE_CMD_EMSTOP 3
+AXIS_NODE_CMD_RESET 4
+AXIS_NODE_CMD_MOVE_ABS_MM 5
+AXIS_NODE_CMD_MOVE_REL_MM 6
+AXIS_NODE_CMD_GET_STATUS 7
+AXIS_NODE_CMD_SET_ENCODER_SCALE 8
+AXIS_NODE_CMD_SET_MAX_TRAVEL 9
+AXIS_NODE_CMD_SAVE_CONFIG 10
+AXIS_NODE_CMD_SET_FAST_SPEED 11
+AXIS_NODE_CMD_SET_SLOW_SPEED 12
+AXIS_NODE_CMD_SET_POSITION_TOLERANCE 13
+]
+"31
+[e E23581 . `uc
+AXIS_ID_Y_L 0
+AXIS_ID_Y_R 1
+AXIS_ID_Z_L 2
+AXIS_ID_Z_R 3
+AXIS_ID_COUNT 4
+]
+"58 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\can_protocol.c
+[e E22882 . `uc
+AXIS_STATE_UNINITIALISED 0
+AXIS_STATE_NOT_HOMED 1
+AXIS_STATE_HOMING 2
+AXIS_STATE_READY 3
+AXIS_STATE_MOVING 4
+AXIS_STATE_STOPPING 5
+AXIS_STATE_EMERGENCY 6
+AXIS_STATE_FAULT 7
+]
+[e E22902 . `uc
+AXIS_FAULT_NONE 0
+AXIS_FAULT_ENCODER_UPDATE 1
+AXIS_FAULT_ENCODER_INVALID 2
+AXIS_FAULT_HOMING_TIMEOUT 3
+AXIS_FAULT_INVALID_HOMING_STEP 4
+AXIS_FAULT_INVALID_STATE 5
+AXIS_FAULT_REFERENCE_STUCK 6
+]
+[e E22911 . `uc
+AXIS_HOMING_IDLE 0
+AXIS_HOMING_SEEK_REFERENCE 1
+AXIS_HOMING_RELEASE_FROM_REFERENCE 2
+AXIS_HOMING_REAPPROACH_REFERENCE 3
+AXIS_HOMING_ZERO_ENCODER 4
+AXIS_HOMING_FINAL_BACKOFF 5
+AXIS_HOMING_FINISH 6
+AXIS_HOMING_WAIT_AFTER_SEEK 7
+AXIS_HOMING_WAIT_AFTER_RELEASE 8
+]
+"74
+[e E23013 . `uc
+AXIS_NODE_CMD_NONE 0
+AXIS_NODE_CMD_HOME 1
+AXIS_NODE_CMD_STOP 2
+AXIS_NODE_CMD_EMSTOP 3
+AXIS_NODE_CMD_RESET 4
+AXIS_NODE_CMD_MOVE_ABS_MM 5
+AXIS_NODE_CMD_MOVE_REL_MM 6
+AXIS_NODE_CMD_GET_STATUS 7
+AXIS_NODE_CMD_SET_ENCODER_SCALE 8
+AXIS_NODE_CMD_SET_MAX_TRAVEL 9
+AXIS_NODE_CMD_SAVE_CONFIG 10
+AXIS_NODE_CMD_SET_FAST_SPEED 11
+AXIS_NODE_CMD_SET_SLOW_SPEED 12
+AXIS_NODE_CMD_SET_POSITION_TOLERANCE 13
+]
+[e E23055 . `uc
+CAN_PROTOCOL_OK 0
+CAN_PROTOCOL_ERROR_NULL 1
+CAN_PROTOCOL_ERROR_DLC 2
+CAN_PROTOCOL_ERROR_ID 3
+CAN_PROTOCOL_ERROR_TX_BUSY 4
+]
+"131
+[e E22892 . `uc
+AXIS_OK 0
+AXIS_ERROR_NOT_HOMED 1
+AXIS_ERROR_BUSY 2
+AXIS_ERROR_FAULT 3
+AXIS_ERROR_INVALIDSTATE 4
+AXIS_ERROR_NULL 5
+AXIS_ERROR_OUT_OF_RANGE 6
+AXIS_ERROR_EMERGENCY 7
+]
+"18 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\slave_node.c
+[e E22856 . `uc
+AXIS_STATE_UNINITIALISED 0
+AXIS_STATE_NOT_HOMED 1
+AXIS_STATE_HOMING 2
+AXIS_STATE_READY 3
+AXIS_STATE_MOVING 4
+AXIS_STATE_STOPPING 5
+AXIS_STATE_EMERGENCY 6
+AXIS_STATE_FAULT 7
+]
+[e E22876 . `uc
+AXIS_FAULT_NONE 0
+AXIS_FAULT_ENCODER_UPDATE 1
+AXIS_FAULT_ENCODER_INVALID 2
+AXIS_FAULT_HOMING_TIMEOUT 3
+AXIS_FAULT_INVALID_HOMING_STEP 4
+AXIS_FAULT_INVALID_STATE 5
+AXIS_FAULT_REFERENCE_STUCK 6
+]
+[e E22885 . `uc
+AXIS_HOMING_IDLE 0
+AXIS_HOMING_SEEK_REFERENCE 1
+AXIS_HOMING_RELEASE_FROM_REFERENCE 2
+AXIS_HOMING_REAPPROACH_REFERENCE 3
+AXIS_HOMING_ZERO_ENCODER 4
+AXIS_HOMING_FINAL_BACKOFF 5
+AXIS_HOMING_FINISH 6
+AXIS_HOMING_WAIT_AFTER_SEEK 7
+AXIS_HOMING_WAIT_AFTER_RELEASE 8
+]
+[e E22760 . `uc
+MOTOR_STATE_DISABLED 0
+MOTOR_STATE_IDLE 1
+MOTOR_STATE_RUNNING 2
+MOTOR_STATE_FAULT 3
+]
+[e E22756 . `uc
+MOTOR_DIRECTION_POSITIVE 0
+MOTOR_DIRECTION_NEGATIVE 1
+]
+[e E22809 . `uc
+ENCODER_STATE_UNINITIALISED 0
+ENCODER_STATE_READY 1
+ENCODER_STATE_ERROR 2
+]
+"29
+[e E22987 . `uc
+AXIS_NODE_CMD_NONE 0
+AXIS_NODE_CMD_HOME 1
+AXIS_NODE_CMD_STOP 2
+AXIS_NODE_CMD_EMSTOP 3
+AXIS_NODE_CMD_RESET 4
+AXIS_NODE_CMD_MOVE_ABS_MM 5
+AXIS_NODE_CMD_MOVE_REL_MM 6
+AXIS_NODE_CMD_GET_STATUS 7
+AXIS_NODE_CMD_SET_ENCODER_SCALE 8
+AXIS_NODE_CMD_SET_MAX_TRAVEL 9
+AXIS_NODE_CMD_SAVE_CONFIG 10
+AXIS_NODE_CMD_SET_FAST_SPEED 11
+AXIS_NODE_CMD_SET_SLOW_SPEED 12
+AXIS_NODE_CMD_SET_POSITION_TOLERANCE 13
+]
+[e E22866 . `uc
+AXIS_OK 0
+AXIS_ERROR_NOT_HOMED 1
+AXIS_ERROR_BUSY 2
+AXIS_ERROR_FAULT 3
+AXIS_ERROR_INVALIDSTATE 4
+AXIS_ERROR_NULL 5
+AXIS_ERROR_OUT_OF_RANGE 6
+AXIS_ERROR_EMERGENCY 7
+]
+"32 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\master_axis_client.c
+[e E22882 . `uc
+AXIS_STATE_UNINITIALISED 0
+AXIS_STATE_NOT_HOMED 1
+AXIS_STATE_HOMING 2
+AXIS_STATE_READY 3
+AXIS_STATE_MOVING 4
+AXIS_STATE_STOPPING 5
+AXIS_STATE_EMERGENCY 6
+AXIS_STATE_FAULT 7
+]
+"33
+[e E22892 . `uc
+AXIS_OK 0
+AXIS_ERROR_NOT_HOMED 1
+AXIS_ERROR_BUSY 2
+AXIS_ERROR_FAULT 3
+AXIS_ERROR_INVALIDSTATE 4
+AXIS_ERROR_NULL 5
+AXIS_ERROR_OUT_OF_RANGE 6
+AXIS_ERROR_EMERGENCY 7
+]
+"34
+[e E22902 . `uc
+AXIS_FAULT_NONE 0
+AXIS_FAULT_ENCODER_UPDATE 1
+AXIS_FAULT_ENCODER_INVALID 2
+AXIS_FAULT_HOMING_TIMEOUT 3
+AXIS_FAULT_INVALID_HOMING_STEP 4
+AXIS_FAULT_INVALID_STATE 5
+AXIS_FAULT_REFERENCE_STUCK 6
+]
+"53
+[e E23094 . `uc
+AXIS_ID_Y_L 0
+AXIS_ID_Y_R 1
+AXIS_ID_Z_L 2
+AXIS_ID_Z_R 3
+AXIS_ID_COUNT 4
+]
+"57
+[e E23013 . `uc
+AXIS_NODE_CMD_NONE 0
+AXIS_NODE_CMD_HOME 1
+AXIS_NODE_CMD_STOP 2
+AXIS_NODE_CMD_EMSTOP 3
+AXIS_NODE_CMD_RESET 4
+AXIS_NODE_CMD_MOVE_ABS_MM 5
+AXIS_NODE_CMD_MOVE_REL_MM 6
+AXIS_NODE_CMD_GET_STATUS 7
+AXIS_NODE_CMD_SET_ENCODER_SCALE 8
+AXIS_NODE_CMD_SET_MAX_TRAVEL 9
+AXIS_NODE_CMD_SAVE_CONFIG 10
+AXIS_NODE_CMD_SET_FAST_SPEED 11
+AXIS_NODE_CMD_SET_SLOW_SPEED 12
+AXIS_NODE_CMD_SET_POSITION_TOLERANCE 13
+]
+"124
+[e E23055 . `uc
+CAN_PROTOCOL_OK 0
+CAN_PROTOCOL_ERROR_NULL 1
+CAN_PROTOCOL_ERROR_DLC 2
+CAN_PROTOCOL_ERROR_ID 3
+CAN_PROTOCOL_ERROR_TX_BUSY 4
+]
+"47 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\master_console.c
+[e E23096 . `uc
+AXIS_ID_Y_L 0
+AXIS_ID_Y_R 1
+AXIS_ID_Z_L 2
+AXIS_ID_Z_R 3
+AXIS_ID_COUNT 4
+]
+[e E23015 . `uc
+AXIS_NODE_CMD_NONE 0
+AXIS_NODE_CMD_HOME 1
+AXIS_NODE_CMD_STOP 2
+AXIS_NODE_CMD_EMSTOP 3
+AXIS_NODE_CMD_RESET 4
+AXIS_NODE_CMD_MOVE_ABS_MM 5
+AXIS_NODE_CMD_MOVE_REL_MM 6
+AXIS_NODE_CMD_GET_STATUS 7
+AXIS_NODE_CMD_SET_ENCODER_SCALE 8
+AXIS_NODE_CMD_SET_MAX_TRAVEL 9
+AXIS_NODE_CMD_SAVE_CONFIG 10
+AXIS_NODE_CMD_SET_FAST_SPEED 11
+AXIS_NODE_CMD_SET_SLOW_SPEED 12
+AXIS_NODE_CMD_SET_POSITION_TOLERANCE 13
+]
+"61 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\axis.c
+[e E22756 . `uc
+MOTOR_DIRECTION_POSITIVE 0
+MOTOR_DIRECTION_NEGATIVE 1
+]
+"91
+[e E22856 . `uc
+AXIS_STATE_UNINITIALISED 0
+AXIS_STATE_NOT_HOMED 1
+AXIS_STATE_HOMING 2
+AXIS_STATE_READY 3
+AXIS_STATE_MOVING 4
+AXIS_STATE_STOPPING 5
+AXIS_STATE_EMERGENCY 6
+AXIS_STATE_FAULT 7
+]
+[e E22876 . `uc
+AXIS_FAULT_NONE 0
+AXIS_FAULT_ENCODER_UPDATE 1
+AXIS_FAULT_ENCODER_INVALID 2
+AXIS_FAULT_HOMING_TIMEOUT 3
+AXIS_FAULT_INVALID_HOMING_STEP 4
+AXIS_FAULT_INVALID_STATE 5
+AXIS_FAULT_REFERENCE_STUCK 6
+]
+[e E22885 . `uc
+AXIS_HOMING_IDLE 0
+AXIS_HOMING_SEEK_REFERENCE 1
+AXIS_HOMING_RELEASE_FROM_REFERENCE 2
+AXIS_HOMING_REAPPROACH_REFERENCE 3
+AXIS_HOMING_ZERO_ENCODER 4
+AXIS_HOMING_FINAL_BACKOFF 5
+AXIS_HOMING_FINISH 6
+AXIS_HOMING_WAIT_AFTER_SEEK 7
+AXIS_HOMING_WAIT_AFTER_RELEASE 8
+]
+[e E22760 . `uc
+MOTOR_STATE_DISABLED 0
+MOTOR_STATE_IDLE 1
+MOTOR_STATE_RUNNING 2
+MOTOR_STATE_FAULT 3
+]
+[e E22809 . `uc
+ENCODER_STATE_UNINITIALISED 0
+ENCODER_STATE_READY 1
+ENCODER_STATE_ERROR 2
+]
+[e E22866 . `uc
+AXIS_OK 0
+AXIS_ERROR_NOT_HOMED 1
+AXIS_ERROR_BUSY 2
+AXIS_ERROR_FAULT 3
+AXIS_ERROR_INVALIDSTATE 4
+AXIS_ERROR_NULL 5
+AXIS_ERROR_OUT_OF_RANGE 6
+AXIS_ERROR_EMERGENCY 7
+]
+"496
+[e E22814 . `uc
+ENCODER_OK 0
+ENCODER_ERROR_COMM 1
+ENCODER_ERROR_NOT_INIT 2
+ENCODER_ERROR_NULL 3
+ENCODER_ERROR_INVALID 4
+ENCODER_ERROR_INVALID_DATA 5
+]
+"112 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\encoder.c
+[e E22756 . `uc
+ENCODER_STATE_UNINITIALISED 0
+ENCODER_STATE_READY 1
+ENCODER_STATE_ERROR 2
+]
+"189
+[e E22761 . `uc
+ENCODER_OK 0
+ENCODER_ERROR_COMM 1
+ENCODER_ERROR_NOT_INIT 2
+ENCODER_ERROR_NULL 3
+ENCODER_ERROR_INVALID 4
+ENCODER_ERROR_INVALID_DATA 5
+]
+"54 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\motor.c
+[e E36 . `uc
+MOTOR_DIRECTION_POSITIVE 0
+MOTOR_DIRECTION_NEGATIVE 1
+]
+"55
+[e E46 . `uc
+MOTOR_STEP_MODE_FULL 0
+MOTOR_STEP_MODE_HALF 1
+]
+"279
+[e E40 . `uc
+MOTOR_STATE_DISABLED 0
+MOTOR_STATE_IDLE 1
+MOTOR_STATE_RUNNING 2
+MOTOR_STATE_FAULT 3
+]
+"61 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\axis.c
+[v _AXIS_LoadDefaultConfig AXIS_LoadDefaultConfig `(v  1 e 1 0 ]
+"254
+[v _AXIS_Home AXIS_Home `(E22866  1 e 1 0 ]
+"295
+[v _AXIS_MoveToMm AXIS_MoveToMm `(E22866  1 e 1 0 ]
+"315
+[v _AXIS_MoveDeltaMm AXIS_MoveDeltaMm `(E22866  1 e 1 0 ]
+"320
+[v _AXIS_Stop AXIS_Stop `(E22866  1 e 1 0 ]
+"338
+[v _AXIS_EmergencyStop AXIS_EmergencyStop `(E22866  1 e 1 0 ]
+"347
+[v _AXIS_ResetFault AXIS_ResetFault `(E22866  1 e 1 0 ]
+"377
+[v _AXIS_GetCurrentPositionMm AXIS_GetCurrentPositionMm `(f  1 e 4 0 ]
+"382
+[v _AXIS_GetTargetPositionMm AXIS_GetTargetPositionMm `(f  1 e 4 0 ]
+"387
+[v _AXIS_GetPositionDeltaMm AXIS_GetPositionDeltaMm `(f  1 e 4 0 ]
+"392
+[v _AXIS_GetState AXIS_GetState `(E22856  1 e 1 0 ]
+"397
+[v _AXIS_GetFaultCode AXIS_GetFaultCode `(E22876  1 e 1 0 ]
+"402
+[v _AXIS_GetHomingStep AXIS_GetHomingStep `(E22885  1 e 1 0 ]
+"407
+[v _AXIS_GetHomingDetectionCount AXIS_GetHomingDetectionCount `(uc  1 e 1 0 ]
+"412
+[v _AXIS_IsHomed AXIS_IsHomed `(a  1 e 1 0 ]
+"416
+[v _AXIS_IsBusy AXIS_IsBusy `(a  1 e 1 0 ]
+"421
+[v _AXIS_HasFault AXIS_HasFault `(a  1 e 1 0 ]
+"426
+[v _AXIS_IsEmergencyActive AXIS_IsEmergencyActive `(a  1 e 1 0 ]
+"432
+[v _AXIS_AbsFloat AXIS_AbsFloat `(f  1 s 4 AXIS_AbsFloat ]
+"437
+[v _AXIS_IsWithinTravelRange AXIS_IsWithinTravelRange `(a  1 s 1 AXIS_IsWithinTravelRange ]
+"447
+[v _AXIS_IsConfigurationValid AXIS_IsConfigurationValid `(a  1 s 1 AXIS_IsConfigurationValid ]
+"468
+[v _AXIS_CommandMotor AXIS_CommandMotor `(v  1 s 1 AXIS_CommandMotor ]
+"480
+[v _AXIS_StopMotor AXIS_StopMotor `(v  1 s 1 AXIS_StopMotor ]
+"485
+[v _AXIS_SetFault AXIS_SetFault `(v  1 s 1 AXIS_SetFault ]
+"493
+[v _AXIS_UpdateFeedback AXIS_UpdateFeedback `(v  1 s 1 AXIS_UpdateFeedback ]
+"510
+[v _AXIS_GetMotorSpeedMmPerSec AXIS_GetMotorSpeedMmPerSec `(f  1 s 4 AXIS_GetMotorSpeedMmPerSec ]
+"519
+[v _AXIS_GetDirectionForPositiveMove AXIS_GetDirectionForPositiveMove `(E22756  1 s 1 AXIS_GetDirectionForPositiveMove ]
+"526
+[v _AXIS_GetDirectionForNegativeMove AXIS_GetDirectionForNegativeMove `(E22756  1 s 1 AXIS_GetDirectionForNegativeMove ]
+"533
+[v _AXIS_GetOppositeDirection AXIS_GetOppositeDirection `(E22756  1 s 1 AXIS_GetOppositeDirection ]
+"540
+[v _AXIS_GetHomingSeekTravelMm AXIS_GetHomingSeekTravelMm `(f  1 s 4 AXIS_GetHomingSeekTravelMm ]
+"546
+[v _AXIS_IsEncoderMotionStopped AXIS_IsEncoderMotionStopped `(a  1 s 1 AXIS_IsEncoderMotionStopped ]
+"609
+[v _AXIS_HandleHoming AXIS_HandleHoming `(v  1 s 1 AXIS_HandleHoming ]
+"680
+[v _AXIS_HandleHomingSeekReference AXIS_HandleHomingSeekReference `(v  1 s 1 AXIS_HandleHomingSeekReference ]
+"718
+[v _AXIS_HandleHomingReleaseFromReference AXIS_HandleHomingReleaseFromReference `(v  1 s 1 AXIS_HandleHomingReleaseFromReference ]
+"751
+[v _AXIS_HandleHomingReapproachReference AXIS_HandleHomingReapproachReference `(v  1 s 1 AXIS_HandleHomingReapproachReference ]
+"795
+[v _AXIS_HandleHomingZeroEncoder AXIS_HandleHomingZeroEncoder `(v  1 s 1 AXIS_HandleHomingZeroEncoder ]
+"810
+[v _AXIS_HandleHomingFinalBackoff AXIS_HandleHomingFinalBackoff `(v  1 s 1 AXIS_HandleHomingFinalBackoff ]
+"831
+[v _AXIS_HandleHomingFinish AXIS_HandleHomingFinish `(v  1 s 1 AXIS_HandleHomingFinish ]
+"841
+[v _AXIS_HomingWaitDone AXIS_HomingWaitDone `(a  1 s 1 AXIS_HomingWaitDone ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"24 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\can_protocol.c
+[v _CAN_PROTOCOL_FloatToBytes CAN_PROTOCOL_FloatToBytes `(v  1 s 1 CAN_PROTOCOL_FloatToBytes ]
+"41
+[v _CAN_PROTOCOL_BytesToFloat CAN_PROTOCOL_BytesToFloat `(f  1 s 4 CAN_PROTOCOL_BytesToFloat ]
+"58
+[v _CAN_PROTOCOL_BuildFlags CAN_PROTOCOL_BuildFlags `(uc  1 s 1 CAN_PROTOCOL_BuildFlags ]
+"74
+[v _CAN_PROTOCOL_SendCommand CAN_PROTOCOL_SendCommand `(E23055  1 e 1 0 ]
+"159
+[v _CAN_PROTOCOL_TryReadResponse CAN_PROTOCOL_TryReadResponse `(E23055  1 e 1 0 ]
+"43 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\encoder.c
+[v _ENCODER_ReadAB ENCODER_ReadAB `(uc  1 s 1 ENCODER_ReadAB ]
+"104
+[v _ENCODER_ResetHardwareCount ENCODER_ResetHardwareCount `(v  1 e 1 0 ]
+"112
+[v _ENCODER_PlatformReadRawCount ENCODER_PlatformReadRawCount `(a  1 s 1 ENCODER_PlatformReadRawCount ]
+"124
+[v _ENCODER_IsScaleValid ENCODER_IsScaleValid `(a  1 s 1 ENCODER_IsScaleValid ]
+"130
+[v _ENCODER_ConvertPositionToRawCount ENCODER_ConvertPositionToRawCount `(l  1 s 4 ENCODER_ConvertPositionToRawCount ]
+"144
+[v _ENCODER_ConvertRawCountToPositionMm ENCODER_ConvertRawCountToPositionMm `(f  1 s 4 ENCODER_ConvertRawCountToPositionMm ]
+"149
+[v _ENCODER_UpdateDerivedPosition ENCODER_UpdateDerivedPosition `(v  1 s 1 ENCODER_UpdateDerivedPosition ]
+"159
+[v _ENCODER_ReadHardwareRawCount ENCODER_ReadHardwareRawCount `(a  1 s 1 ENCODER_ReadHardwareRawCount ]
+"170
+[v _ENCODER_Initialise ENCODER_Initialise `(v  1 e 1 0 ]
+"189
+[v _ENCODER_Update ENCODER_Update `(E22814  1 e 1 0 ]
+"221
+[v _ENCODER_GetRawCount ENCODER_GetRawCount `(l  1 e 4 0 ]
+"226
+[v _ENCODER_GetPositionMm ENCODER_GetPositionMm `(f  1 e 4 0 ]
+"232
+[v _ENCODER_SetZero ENCODER_SetZero `(v  1 e 1 0 ]
+"255
+[v _ENCODER_IsValid ENCODER_IsValid `(a  1 e 1 0 ]
+"269
+[v _ENCODER_SetPositionMm ENCODER_SetPositionMm `(v  1 e 1 0 ]
+"13 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\main.c
+[v _pulse_ok_led pulse_ok_led `(v  1 s 1 pulse_ok_led ]
+"20
+[v _pulse_err_led pulse_err_led `(v  1 s 1 pulse_err_led ]
+"27
+[v _send_and_blink send_and_blink `(v  1 s 1 send_and_blink ]
+"41
+[v _main main `(v  1 e 1 0 ]
+"53 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\master_axis_client.c
+[v _MASTER_AXIS_CLIENT_IsAxisValid MASTER_AXIS_CLIENT_IsAxisValid `(a  1 s 1 MASTER_AXIS_CLIENT_IsAxisValid ]
+"57
+[v _MASTER_AXIS_CLIENT_CommandMove MASTER_AXIS_CLIENT_CommandMove `(a  1 s 1 MASTER_AXIS_CLIENT_CommandMove ]
+"62
+[v _MASTER_AXIS_CLIENT_IsCommandValid MASTER_AXIS_CLIENT_IsCommandValid `(a  1 s 1 MASTER_AXIS_CLIENT_IsCommandValid ]
+"85
+[v _MASTER_AXIS_CLIENT_UpdateFromResponse MASTER_AXIS_CLIENT_UpdateFromResponse `(v  1 s 1 MASTER_AXIS_CLIENT_UpdateFromResponse ]
+"95
+[v _MASTER_AXIS_CLIENT_PrintResponse MASTER_AXIS_CLIENT_PrintResponse `(v  1 s 1 MASTER_AXIS_CLIENT_PrintResponse ]
+"121
+[v _MASTER_AXIS_CLIENT_WaitForAck MASTER_AXIS_CLIENT_WaitForAck `(a  1 s 1 MASTER_AXIS_CLIENT_WaitForAck ]
+"151
+[v _MASTER_AXIS_CLIENT_IsReadyForMove MASTER_AXIS_CLIENT_IsReadyForMove `(a  1 s 1 MASTER_AXIS_CLIENT_IsReadyForMove ]
+"166
+[v _MASTER_AXIS_CLIENT_RequestStatusOnce MASTER_AXIS_CLIENT_RequestStatusOnce `(a  1 s 1 MASTER_AXIS_CLIENT_RequestStatusOnce ]
+"192
+[v _MASTER_AXIS_CLIENT_WaitUntilReadyForMove MASTER_AXIS_CLIENT_WaitUntilReadyForMove `(a  1 s 1 MASTER_AXIS_CLIENT_WaitUntilReadyForMove ]
+"207
+[v _MASTER_AXIS_CLIENT_Init MASTER_AXIS_CLIENT_Init `(v  1 e 1 0 ]
+"223
+[v _MASTER_AXIS_CLIENT_SendCommand MASTER_AXIS_CLIENT_SendCommand `(a  1 e 1 0 ]
+"10 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\master_console.c
+[v _MASTER_CONSOLE_ReadChar MASTER_CONSOLE_ReadChar `(a  1 s 1 MASTER_CONSOLE_ReadChar ]
+"21
+[v _MASTER_CONSOLE_PrintMenu MASTER_CONSOLE_PrintMenu `(v  1 s 1 MASTER_CONSOLE_PrintMenu ]
+"63 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/ecan.c
+[v _ECAN_Initialize ECAN_Initialize `(v  1 e 1 0 ]
+"159
+[v _CAN_transmit CAN_transmit `(uc  1 e 1 0 ]
+"237
+[v _CAN_receive CAN_receive `(uc  1 e 1 0 ]
+"362
+[v _convertReg2ExtendedCANid convertReg2ExtendedCANid `(ul  1 s 4 convertReg2ExtendedCANid ]
+"383
+[v _convertReg2StandardCANid convertReg2StandardCANid `(ul  1 s 4 convertReg2StandardCANid ]
+"396
+[v _convertCANid2Reg convertCANid2Reg `(v  1 s 1 convertCANid2Reg ]
+"52 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"74
+[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
+"50 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"64
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"78
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"59 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"154
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"176
+[v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
+"191
+[v _IOCBF0_SetInterruptHandler IOCBF0_SetInterruptHandler `(v  1 e 1 0 ]
+"198
+[v _IOCBF0_DefaultInterruptHandler IOCBF0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"206
+[v _IOCBF1_ISR IOCBF1_ISR `(v  1 e 1 0 ]
+"221
+[v _IOCBF1_SetInterruptHandler IOCBF1_SetInterruptHandler `(v  1 e 1 0 ]
+"228
+[v _IOCBF1_DefaultInterruptHandler IOCBF1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"236
+[v _IOCBF2_ISR IOCBF2_ISR `(v  1 e 1 0 ]
+"251
+[v _IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
+"258
+[v _IOCBF2_DefaultInterruptHandler IOCBF2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"58 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/pwm5.c
+[v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
+"74
+[v _PWM5_LoadDutyValue PWM5_LoadDutyValue `(v  1 e 1 0 ]
+"58 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/pwm6.c
+[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
+"74
+[v _PWM6_LoadDutyValue PWM6_LoadDutyValue `(v  1 e 1 0 ]
+"61 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"121
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"132
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
+"142
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"146
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"64 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"108
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"119
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"130
+[v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
+"144
+[v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
+"155
+[v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
+"165
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+"183
+[v _TMR2_CallBack TMR2_CallBack `(v  1 e 1 0 ]
+"193
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+"197
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"81 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+"147
+[v _UART1_is_rx_ready UART1_is_rx_ready `(a  1 e 1 0 ]
+"166
+[v _UART1_Read UART1_Read `(uc  1 e 1 0 ]
+"217
+[v _UART1_Transmit_ISR UART1_Transmit_ISR `(v  1 e 1 0 ]
+"238
+[v _UART1_DefaultFramingErrorHandler UART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"240
+[v _UART1_DefaultOverrunErrorHandler UART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"242
+[v _UART1_DefaultErrorHandler UART1_DefaultErrorHandler `(v  1 e 1 0 ]
+"245
+[v _UART1_SetFramingErrorHandler UART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+"249
+[v _UART1_SetOverrunErrorHandler UART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"253
+[v _UART1_SetErrorHandler UART1_SetErrorHandler `(v  1 e 1 0 ]
+"260
+[v _UART1_SetTxInterruptHandler UART1_SetTxInterruptHandler `(v  1 e 1 0 ]
+"58 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\millisecond_timers.c
+[v _millis millis `(ul  1 e 4 0 ]
+"80 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\motor.c
+[v _MOTOR_AllOutputsOff MOTOR_AllOutputsOff `(v  1 s 1 MOTOR_AllOutputsOff ]
+"92
+[v _MOTOR_PhaseAForward MOTOR_PhaseAForward `(v  1 s 1 MOTOR_PhaseAForward ]
+"98
+[v _MOTOR_PhaseAReverse MOTOR_PhaseAReverse `(v  1 s 1 MOTOR_PhaseAReverse ]
+"104
+[v _MOTOR_PhaseAOff MOTOR_PhaseAOff `(v  1 s 1 MOTOR_PhaseAOff ]
+"110
+[v _MOTOR_PhaseBForward MOTOR_PhaseBForward `(v  1 s 1 MOTOR_PhaseBForward ]
+"116
+[v _MOTOR_PhaseBReverse MOTOR_PhaseBReverse `(v  1 s 1 MOTOR_PhaseBReverse ]
+"122
+[v _MOTOR_PhaseBOff MOTOR_PhaseBOff `(v  1 s 1 MOTOR_PhaseBOff ]
+"129
+[v _MOTOR_ApplyFullStep MOTOR_ApplyFullStep `(v  1 s 1 MOTOR_ApplyFullStep ]
+"156
+[v _MOTOR_ApplyHalfStep MOTOR_ApplyHalfStep `(v  1 s 1 MOTOR_ApplyHalfStep ]
+"201
+[v _MOTOR_ApplyCurrentStep MOTOR_ApplyCurrentStep `(v  1 s 1 MOTOR_ApplyCurrentStep ]
+"206
+[v _MOTOR_AdvanceStep MOTOR_AdvanceStep `(v  1 s 1 MOTOR_AdvanceStep ]
+"222
+[v _MOTOR_ApplyEnablePin MOTOR_ApplyEnablePin `(v  1 s 1 MOTOR_ApplyEnablePin ]
+"233
+[v _MOTOR_ApplyDirectionPin MOTOR_ApplyDirectionPin `(v  1 s 1 MOTOR_ApplyDirectionPin ]
+"241
+[v _MOTOR_ApplyStepGenerator MOTOR_ApplyStepGenerator `(v  1 s 1 MOTOR_ApplyStepGenerator ]
+"269
+[v _MOTOR_ClampStepFrequencyHz MOTOR_ClampStepFrequencyHz `(us  1 s 2 MOTOR_ClampStepFrequencyHz ]
+"279
+[v _MOTOR_UpdateState MOTOR_UpdateState `(v  1 s 1 MOTOR_UpdateState ]
+"287
+[v _MOTOR_Initialise MOTOR_Initialise `(v  1 e 1 0 ]
+"330
+[v _MOTOR_Enable MOTOR_Enable `(v  1 e 1 0 ]
+"376
+[v _MOTOR_SetDirection MOTOR_SetDirection `(v  1 e 1 0 ]
+"387
+[v _MOTOR_GetDirection MOTOR_GetDirection `(E22756  1 e 1 0 ]
+"392
+[v _MOTOR_SetStepFrequencyHz MOTOR_SetStepFrequencyHz `(v  1 e 1 0 ]
+"413
+[v _MOTOR_GetStepFrequencyHz MOTOR_GetStepFrequencyHz `(us  1 e 2 0 ]
+"421
+[v _MOTOR_Start MOTOR_Start `(v  1 e 1 0 ]
+"441
+[v _MOTOR_Stop MOTOR_Stop `(v  1 e 1 0 ]
+"455
+[v _MOTOR_IsRunning MOTOR_IsRunning `(a  1 e 1 0 ]
+"45 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\uart_print.c
+[v _send_uint16_as_str_to_uart send_uint16_as_str_to_uart `(v  1 e 1 0 ]
+"115
+[v _send_int16_as_str_to_uart send_int16_as_str_to_uart `(v  1 e 1 0 ]
+"135
+[v _send_string send_string `(v  1 e 1 0 ]
+"477 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X/mcc_generated_files/uart1.h
+[v _UART1_TxInterruptHandler UART1_TxInterruptHandler `*.37(v  1 e 2 0 ]
+"270 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f26k83.h
+[v _CIOCON CIOCON `VEuc  1 e 1 @14080 ]
+"437
+[v _BRGCON1 BRGCON1 `VEuc  1 e 1 @14083 ]
+"513
+[v _BRGCON2 BRGCON2 `VEuc  1 e 1 @14084 ]
+"589
+[v _BRGCON3 BRGCON3 `VEuc  1 e 1 @14085 ]
+"2114
+[v _T2TMR T2TMR `VEuc  1 e 1 @16298 ]
+"2119
+[v _TMR2 TMR2 `VEuc  1 e 1 @16298 ]
+"2152
+[v _T2PR T2PR `VEuc  1 e 1 @16299 ]
+"2157
+[v _PR2 PR2 `VEuc  1 e 1 @16299 ]
+"2190
+[v _T2CON T2CON `VEuc  1 e 1 @16300 ]
+[s S1684 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"2226
+[s S1688 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+[s S1692 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+]
+[s S1700 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+[u S1709 . 1 `S1684 1 . 1 0 `S1688 1 . 1 0 `S1692 1 . 1 0 `S1700 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES1709  1 e 1 @16300 ]
+"2336
+[v _T2HLT T2HLT `VEuc  1 e 1 @16301 ]
+[s S1570 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"2369
+[s S1575 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S1581 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+[s S1586 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+[u S1592 . 1 `S1570 1 . 1 0 `S1575 1 . 1 0 `S1581 1 . 1 0 `S1586 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES1592  1 e 1 @16301 ]
+"2464
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @16302 ]
+"2622
+[v _T2RST T2RST `VEuc  1 e 1 @16303 ]
+[s S1646 . 1 `uc 1 RSEL 1 0 :5:0 
+]
+"2649
+[s S1648 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+`uc 1 RSEL4 1 0 :1:4 
+]
+[s S1654 . 1 `uc 1 T2RSEL 1 0 :5:0 
+]
+[s S1656 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+`uc 1 T2RSEL4 1 0 :1:4 
+]
+[u S1662 . 1 `S1646 1 . 1 0 `S1648 1 . 1 0 `S1654 1 . 1 0 `S1656 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES1662  1 e 1 @16303 ]
+"3881
+[v _TMR0L TMR0L `VEuc  1 e 1 @16310 ]
+"4019
+[v _TMR0H TMR0H `VEuc  1 e 1 @16311 ]
+"4273
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @16312 ]
+[s S116 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"4307
+[s S122 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S128 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[s S134 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S139 . 1 `S116 1 . 1 0 `S122 1 . 1 0 `S128 1 . 1 0 `S134 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES139  1 e 1 @16312 ]
+"4397
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @16313 ]
+"4539
+[v _LATA LATA `VEuc  1 e 1 @16314 ]
+[s S1820 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"4566
+[s S1829 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+`uc 1 LA7 1 0 :1:7 
+]
+[u S1838 . 1 `S1820 1 . 1 0 `S1829 1 . 1 0 ]
+[v _LATAbits LATAbits `VES1838  1 e 1 @16314 ]
+"4651
+[v _LATB LATB `VEuc  1 e 1 @16315 ]
+"4763
+[v _LATC LATC `VEuc  1 e 1 @16316 ]
+"4875
+[v _TRISA TRISA `VEuc  1 e 1 @16322 ]
+"4937
+[v _TRISB TRISB `VEuc  1 e 1 @16323 ]
+"4999
+[v _TRISC TRISC `VEuc  1 e 1 @16324 ]
+[s S4868 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"5166
+[s S4877 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S4880 . 1 `S4868 1 . 1 0 `S4877 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES4880  1 e 1 @16331 ]
+[s S700 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"5361
+[s S708 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S711 . 1 `S700 1 . 1 0 `S708 1 . 1 0 ]
+[v _INTCON0bits INTCON0bits `VES711  1 e 1 @16338 ]
+"13960
+[v _RXF0SIDH RXF0SIDH `VEuc  1 e 1 @14240 ]
+"14080
+[v _RXF0SIDL RXF0SIDL `VEuc  1 e 1 @14241 ]
+"14168
+[v _RXF0EIDH RXF0EIDH `VEuc  1 e 1 @14242 ]
+"14238
+[v _RXF0EIDL RXF0EIDL `VEuc  1 e 1 @14243 ]
+"14308
+[v _RXF1SIDH RXF1SIDH `VEuc  1 e 1 @14244 ]
+"14428
+[v _RXF1SIDL RXF1SIDL `VEuc  1 e 1 @14245 ]
+"14516
+[v _RXF1EIDH RXF1EIDH `VEuc  1 e 1 @14246 ]
+"14586
+[v _RXF1EIDL RXF1EIDL `VEuc  1 e 1 @14247 ]
+"14656
+[v _RXF2SIDH RXF2SIDH `VEuc  1 e 1 @14248 ]
+"14776
+[v _RXF2SIDL RXF2SIDL `VEuc  1 e 1 @14249 ]
+"14864
+[v _RXF2EIDH RXF2EIDH `VEuc  1 e 1 @14250 ]
+"14934
+[v _RXF2EIDL RXF2EIDL `VEuc  1 e 1 @14251 ]
+"15004
+[v _RXF3SIDH RXF3SIDH `VEuc  1 e 1 @14252 ]
+"15124
+[v _RXF3SIDL RXF3SIDL `VEuc  1 e 1 @14253 ]
+"15212
+[v _RXF3EIDH RXF3EIDH `VEuc  1 e 1 @14254 ]
+"15282
+[v _RXF3EIDL RXF3EIDL `VEuc  1 e 1 @14255 ]
+"15352
+[v _RXF4SIDH RXF4SIDH `VEuc  1 e 1 @14256 ]
+"15472
+[v _RXF4SIDL RXF4SIDL `VEuc  1 e 1 @14257 ]
+"15560
+[v _RXF4EIDH RXF4EIDH `VEuc  1 e 1 @14258 ]
+"15630
+[v _RXF4EIDL RXF4EIDL `VEuc  1 e 1 @14259 ]
+"15700
+[v _RXF5SIDH RXF5SIDH `VEuc  1 e 1 @14260 ]
+"15820
+[v _RXF5SIDL RXF5SIDL `VEuc  1 e 1 @14261 ]
+"15908
+[v _RXF5EIDH RXF5EIDH `VEuc  1 e 1 @14262 ]
+"15978
+[v _RXF5EIDL RXF5EIDL `VEuc  1 e 1 @14263 ]
+"16048
+[v _RXM0SIDH RXM0SIDH `VEuc  1 e 1 @14264 ]
+"16168
+[v _RXM0SIDL RXM0SIDL `VEuc  1 e 1 @14265 ]
+"16256
+[v _RXM0EIDH RXM0EIDH `VEuc  1 e 1 @14266 ]
+"16326
+[v _RXM0EIDL RXM0EIDL `VEuc  1 e 1 @14267 ]
+"16396
+[v _RXM1SIDH RXM1SIDH `VEuc  1 e 1 @14268 ]
+"16516
+[v _RXM1SIDL RXM1SIDL `VEuc  1 e 1 @14269 ]
+"16604
+[v _RXM1EIDH RXM1EIDH `VEuc  1 e 1 @14270 ]
+"16674
+[v _RXM1EIDL RXM1EIDL `VEuc  1 e 1 @14271 ]
+[s S1048 . 1 `uc 1 TXPRI 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 TXREQ 1 0 :1:3 
+`uc 1 TXERR 1 0 :1:4 
+`uc 1 TXLARB 1 0 :1:5 
+`uc 1 TXABT 1 0 :1:6 
+`uc 1 TXBIF 1 0 :1:7 
+]
+"16764
+[s S1056 . 1 `uc 1 TXPRI0 1 0 :1:0 
+`uc 1 TXPRI1 1 0 :1:1 
+]
+[u S1059 . 1 `S1048 1 . 1 0 `S1056 1 . 1 0 ]
+[v _TXB2CONbits TXB2CONbits `VES1059  1 e 1 @14272 ]
+"16809
+[v _TXB2SIDH TXB2SIDH `VEuc  1 e 1 @14273 ]
+"16929
+[v _TXB2SIDL TXB2SIDL `VEuc  1 e 1 @14274 ]
+"17017
+[v _TXB2EIDH TXB2EIDH `VEuc  1 e 1 @14275 ]
+"17087
+[v _TXB2EIDL TXB2EIDL `VEuc  1 e 1 @14276 ]
+"17157
+[v _TXB2DLC TXB2DLC `VEuc  1 e 1 @14277 ]
+"17210
+[v _TXB2D0 TXB2D0 `VEuc  1 e 1 @14278 ]
+"17280
+[v _TXB2D1 TXB2D1 `VEuc  1 e 1 @14279 ]
+"17350
+[v _TXB2D2 TXB2D2 `VEuc  1 e 1 @14280 ]
+"17420
+[v _TXB2D3 TXB2D3 `VEuc  1 e 1 @14281 ]
+"17490
+[v _TXB2D4 TXB2D4 `VEuc  1 e 1 @14282 ]
+"17560
+[v _TXB2D5 TXB2D5 `VEuc  1 e 1 @14283 ]
+"17630
+[v _TXB2D6 TXB2D6 `VEuc  1 e 1 @14284 ]
+"17700
+[v _TXB2D7 TXB2D7 `VEuc  1 e 1 @14285 ]
+"18046
+[v _TXB1CONbits TXB1CONbits `VES1059  1 e 1 @14288 ]
+"18091
+[v _TXB1SIDH TXB1SIDH `VEuc  1 e 1 @14289 ]
+"18211
+[v _TXB1SIDL TXB1SIDL `VEuc  1 e 1 @14290 ]
+"18299
+[v _TXB1EIDH TXB1EIDH `VEuc  1 e 1 @14291 ]
+"18369
+[v _TXB1EIDL TXB1EIDL `VEuc  1 e 1 @14292 ]
+"18439
+[v _TXB1DLC TXB1DLC `VEuc  1 e 1 @14293 ]
+"18492
+[v _TXB1D0 TXB1D0 `VEuc  1 e 1 @14294 ]
+"18562
+[v _TXB1D1 TXB1D1 `VEuc  1 e 1 @14295 ]
+"18632
+[v _TXB1D2 TXB1D2 `VEuc  1 e 1 @14296 ]
+"18702
+[v _TXB1D3 TXB1D3 `VEuc  1 e 1 @14297 ]
+"18772
+[v _TXB1D4 TXB1D4 `VEuc  1 e 1 @14298 ]
+"18842
+[v _TXB1D5 TXB1D5 `VEuc  1 e 1 @14299 ]
+"18912
+[v _TXB1D6 TXB1D6 `VEuc  1 e 1 @14300 ]
+"18982
+[v _TXB1D7 TXB1D7 `VEuc  1 e 1 @14301 ]
+"19311
+[v _TXB0CONbits TXB0CONbits `VES1059  1 e 1 @14304 ]
+"19356
+[v _TXB0SIDH TXB0SIDH `VEuc  1 e 1 @14305 ]
+"19476
+[v _TXB0SIDL TXB0SIDL `VEuc  1 e 1 @14306 ]
+"19564
+[v _TXB0EIDH TXB0EIDH `VEuc  1 e 1 @14307 ]
+"19634
+[v _TXB0EIDL TXB0EIDL `VEuc  1 e 1 @14308 ]
+"19704
+[v _TXB0DLC TXB0DLC `VEuc  1 e 1 @14309 ]
+"19757
+[v _TXB0D0 TXB0D0 `VEuc  1 e 1 @14310 ]
+"19827
+[v _TXB0D1 TXB0D1 `VEuc  1 e 1 @14311 ]
+"19897
+[v _TXB0D2 TXB0D2 `VEuc  1 e 1 @14312 ]
+"19967
+[v _TXB0D3 TXB0D3 `VEuc  1 e 1 @14313 ]
+"20037
+[v _TXB0D4 TXB0D4 `VEuc  1 e 1 @14314 ]
+"20107
+[v _TXB0D5 TXB0D5 `VEuc  1 e 1 @14315 ]
+"20177
+[v _TXB0D6 TXB0D6 `VEuc  1 e 1 @14316 ]
+"20247
+[v _TXB0D7 TXB0D7 `VEuc  1 e 1 @14317 ]
+[s S1256 . 1 `uc 1 FILHIT0 1 0 :1:0 
+`uc 1 FILHIT1 1 0 :1:1 
+`uc 1 FILHIT2 1 0 :1:2 
+`uc 1 RXRTRRO_FILHIT3 1 0 :1:3 
+`uc 1 FILHIT4 1 0 :1:4 
+`uc 1 RXM0_RTRRO 1 0 :1:5 
+`uc 1 RXM1 1 0 :1:6 
+`uc 1 RXFUL 1 0 :1:7 
+]
+"20602
+[s S1265 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 RXRTRRO 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 RXM0 1 0 :1:5 
+]
+[s S1270 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 FILHIT3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 RTRRO 1 0 :1:5 
+]
+[u S1275 . 1 `S1256 1 . 1 0 `S1265 1 . 1 0 `S1270 1 . 1 0 ]
+[v _RXB1CONbits RXB1CONbits `VES1275  1 e 1 @14320 ]
+"20667
+[v _RXB1SIDH RXB1SIDH `VEuc  1 e 1 @14321 ]
+"20787
+[v _RXB1SIDL RXB1SIDL `VEuc  1 e 1 @14322 ]
+"20880
+[v _RXB1EIDH RXB1EIDH `VEuc  1 e 1 @14323 ]
+"20950
+[v _RXB1EIDL RXB1EIDL `VEuc  1 e 1 @14324 ]
+"21020
+[v _RXB1DLC RXB1DLC `VEuc  1 e 1 @14325 ]
+"21090
+[v _RXB1D0 RXB1D0 `VEuc  1 e 1 @14326 ]
+"21160
+[v _RXB1D1 RXB1D1 `VEuc  1 e 1 @14327 ]
+"21230
+[v _RXB1D2 RXB1D2 `VEuc  1 e 1 @14328 ]
+"21300
+[v _RXB1D3 RXB1D3 `VEuc  1 e 1 @14329 ]
+"21370
+[v _RXB1D4 RXB1D4 `VEuc  1 e 1 @14330 ]
+"21440
+[v _RXB1D5 RXB1D5 `VEuc  1 e 1 @14331 ]
+"21510
+[v _RXB1D6 RXB1D6 `VEuc  1 e 1 @14332 ]
+"21580
+[v _RXB1D7 RXB1D7 `VEuc  1 e 1 @14333 ]
+[s S726 . 1 `uc 1 SWIP 1 0 :1:0 
+`uc 1 HLVDIP 1 0 :1:1 
+`uc 1 OSFIP 1 0 :1:2 
+`uc 1 CSWIP 1 0 :1:3 
+`uc 1 NVMIP 1 0 :1:4 
+`uc 1 SCANIP 1 0 :1:5 
+`uc 1 CRCIP 1 0 :1:6 
+`uc 1 IOCIP 1 0 :1:7 
+]
+"24440
+[u S735 . 1 `S726 1 . 1 0 ]
+[v _IPR0bits IPR0bits `VES735  1 e 1 @14720 ]
+[s S773 . 1 `uc 1 I2C1TXIP 1 0 :1:0 
+`uc 1 I2C1IP 1 0 :1:1 
+`uc 1 I2C1EIP 1 0 :1:2 
+`uc 1 U1RXIP 1 0 :1:3 
+`uc 1 U1TXIP 1 0 :1:4 
+`uc 1 U1EIP 1 0 :1:5 
+`uc 1 U1IP 1 0 :1:6 
+`uc 1 TMR0IP 1 0 :1:7 
+]
+"24663
+[s S782 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIP 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXBNIP 1 0 :1:4 
+]
+[u S787 . 1 `S773 1 . 1 0 `S782 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES787  1 e 1 @14723 ]
+[s S747 . 1 `uc 1 TMR1IP 1 0 :1:0 
+`uc 1 TMR1GIP 1 0 :1:1 
+`uc 1 TMR2IP 1 0 :1:2 
+`uc 1 CCP1IP 1 0 :1:3 
+`uc 1 NCO1IP 1 0 :1:4 
+`uc 1 CWG1IP 1 0 :1:5 
+`uc 1 CLC1IP 1 0 :1:6 
+`uc 1 INT1IP 1 0 :1:7 
+]
+"24738
+[s S756 . 1 `uc 1 CCIP3IP 1 0 :1:0 
+]
+[u S758 . 1 `S747 1 . 1 0 `S756 1 . 1 0 ]
+[v _IPR4bits IPR4bits `VES758  1 e 1 @14724 ]
+[s S335 . 1 `uc 1 SWIE 1 0 :1:0 
+`uc 1 HLVDIE 1 0 :1:1 
+`uc 1 OSFIE 1 0 :1:2 
+`uc 1 CSWIE 1 0 :1:3 
+`uc 1 NVMIE 1 0 :1:4 
+`uc 1 SCANIE 1 0 :1:5 
+`uc 1 CRCIE 1 0 :1:6 
+`uc 1 IOCIE 1 0 :1:7 
+]
+"25165
+[u S344 . 1 `S335 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES344  1 e 1 @14736 ]
+[s S60 . 1 `uc 1 I2C1TXIE 1 0 :1:0 
+`uc 1 I2C1IE 1 0 :1:1 
+`uc 1 I2C1EIE 1 0 :1:2 
+`uc 1 U1RXIE 1 0 :1:3 
+`uc 1 U1TXIE 1 0 :1:4 
+`uc 1 U1EIE 1 0 :1:5 
+`uc 1 U1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"25404
+[s S69 . 1 `uc 1 RXB0IE 1 0 :1:0 
+`uc 1 RXB1IE 1 0 :1:1 
+`uc 1 TXB0IE 1 0 :1:2 
+`uc 1 TXB1IE 1 0 :1:3 
+`uc 1 TXB2IE 1 0 :1:4 
+]
+[s S75 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIE 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXBNIE 1 0 :1:4 
+]
+[u S80 . 1 `S60 1 . 1 0 `S69 1 . 1 0 `S75 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES80  1 e 1 @14739 ]
+[s S839 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR1GIE 1 0 :1:1 
+`uc 1 TMR2IE 1 0 :1:2 
+`uc 1 CCP1IE 1 0 :1:3 
+`uc 1 NCO1IE 1 0 :1:4 
+`uc 1 CWG1IE 1 0 :1:5 
+`uc 1 CLC1IE 1 0 :1:6 
+`uc 1 INT1IE 1 0 :1:7 
+]
+"25501
+[u S848 . 1 `S839 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES848  1 e 1 @14740 ]
+[s S817 . 1 `uc 1 SWIF 1 0 :1:0 
+`uc 1 HLVDIF 1 0 :1:1 
+`uc 1 OSFIF 1 0 :1:2 
+`uc 1 CSWIF 1 0 :1:3 
+`uc 1 NVMIF 1 0 :1:4 
+`uc 1 SCANIF 1 0 :1:5 
+`uc 1 CRCIF 1 0 :1:6 
+`uc 1 IOCIF 1 0 :1:7 
+]
+"25896
+[u S826 . 1 `S817 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES826  1 e 1 @14752 ]
+[s S28 . 1 `uc 1 I2C1TXIF 1 0 :1:0 
+`uc 1 I2C1IF 1 0 :1:1 
+`uc 1 I2C1EIF 1 0 :1:2 
+`uc 1 U1RXIF 1 0 :1:3 
+`uc 1 U1TXIF 1 0 :1:4 
+`uc 1 U1EIF 1 0 :1:5 
+`uc 1 U1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"26128
+[s S37 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXBNIF 1 0 :1:4 
+]
+[u S42 . 1 `S28 1 . 1 0 `S37 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES42  1 e 1 @14755 ]
+[s S860 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR1GIF 1 0 :1:1 
+`uc 1 TMR2IF 1 0 :1:2 
+`uc 1 CCP1IF 1 0 :1:3 
+`uc 1 NCO1IF 1 0 :1:4 
+`uc 1 CWG1IF 1 0 :1:5 
+`uc 1 CLC1IF 1 0 :1:6 
+`uc 1 INT1IF 1 0 :1:7 
+]
+"26200
+[u S869 . 1 `S860 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES869  1 e 1 @14756 ]
+"26578
+[v _PMD0 PMD0 `VEuc  1 e 1 @14784 ]
+"26655
+[v _PMD1 PMD1 `VEuc  1 e 1 @14785 ]
+"26725
+[v _PMD2 PMD2 `VEuc  1 e 1 @14786 ]
+"26770
+[v _PMD3 PMD3 `VEuc  1 e 1 @14787 ]
+"26832
+[v _PMD4 PMD4 `VEuc  1 e 1 @14788 ]
+"26865
+[v _PMD5 PMD5 `VEuc  1 e 1 @14789 ]
+"26910
+[v _PMD6 PMD6 `VEuc  1 e 1 @14790 ]
+"26966
+[v _PMD7 PMD7 `VEuc  1 e 1 @14791 ]
+"27112
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @14809 ]
+"27252
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @14811 ]
+"27404
+[v _OSCEN OSCEN `VEuc  1 e 1 @14813 ]
+"27455
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @14814 ]
+"27559
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @14815 ]
+"29221
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @14864 ]
+"29271
+[v _RC1PPS RC1PPS `VEuc  1 e 1 @14865 ]
+"29371
+[v _RC3PPS RC3PPS `VEuc  1 e 1 @14867 ]
+"29571
+[v _RC7PPS RC7PPS `VEuc  1 e 1 @14871 ]
+"29621
+[v _ANSELA ANSELA `VEuc  1 e 1 @14912 ]
+"29683
+[v _WPUA WPUA `VEuc  1 e 1 @14913 ]
+"29745
+[v _ODCONA ODCONA `VEuc  1 e 1 @14914 ]
+"29807
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @14915 ]
+"29869
+[v _INLVLA INLVLA `VEuc  1 e 1 @14916 ]
+"30117
+[v _ANSELB ANSELB `VEuc  1 e 1 @14928 ]
+"30179
+[v _WPUB WPUB `VEuc  1 e 1 @14929 ]
+"30241
+[v _ODCONB ODCONB `VEuc  1 e 1 @14930 ]
+"30303
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @14931 ]
+"30365
+[v _INLVLB INLVLB `VEuc  1 e 1 @14932 ]
+[s S284 . 1 `uc 1 IOCBP0 1 0 :1:0 
+`uc 1 IOCBP1 1 0 :1:1 
+`uc 1 IOCBP2 1 0 :1:2 
+`uc 1 IOCBP3 1 0 :1:3 
+`uc 1 IOCBP4 1 0 :1:4 
+`uc 1 IOCBP5 1 0 :1:5 
+`uc 1 IOCBP6 1 0 :1:6 
+`uc 1 IOCBP7 1 0 :1:7 
+]
+"30444
+[u S293 . 1 `S284 1 . 1 0 ]
+[v _IOCBPbits IOCBPbits `VES293  1 e 1 @14933 ]
+[s S263 . 1 `uc 1 IOCBN0 1 0 :1:0 
+`uc 1 IOCBN1 1 0 :1:1 
+`uc 1 IOCBN2 1 0 :1:2 
+`uc 1 IOCBN3 1 0 :1:3 
+`uc 1 IOCBN4 1 0 :1:4 
+`uc 1 IOCBN5 1 0 :1:5 
+`uc 1 IOCBN6 1 0 :1:6 
+`uc 1 IOCBN7 1 0 :1:7 
+]
+"30506
+[u S272 . 1 `S263 1 . 1 0 ]
+[v _IOCBNbits IOCBNbits `VES272  1 e 1 @14934 ]
+[s S242 . 1 `uc 1 IOCBF0 1 0 :1:0 
+`uc 1 IOCBF1 1 0 :1:1 
+`uc 1 IOCBF2 1 0 :1:2 
+`uc 1 IOCBF3 1 0 :1:3 
+`uc 1 IOCBF4 1 0 :1:4 
+`uc 1 IOCBF5 1 0 :1:5 
+`uc 1 IOCBF6 1 0 :1:6 
+`uc 1 IOCBF7 1 0 :1:7 
+]
+"30568
+[u S251 . 1 `S242 1 . 1 0 ]
+[v _IOCBFbits IOCBFbits `VES251  1 e 1 @14935 ]
+"30829
+[v _ANSELC ANSELC `VEuc  1 e 1 @14944 ]
+"30891
+[v _WPUC WPUC `VEuc  1 e 1 @14945 ]
+"30953
+[v _ODCONC ODCONC `VEuc  1 e 1 @14946 ]
+"31015
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @14947 ]
+"31077
+[v _INLVLC INLVLC `VEuc  1 e 1 @14948 ]
+"31541
+[v _WPUE WPUE `VEuc  1 e 1 @14977 ]
+"31562
+[v _INLVLE INLVLE `VEuc  1 e 1 @14980 ]
+"32446
+[v _U1RXPPS U1RXPPS `VEuc  1 e 1 @15079 ]
+"32526
+[v _CANRXPPS CANRXPPS `VEuc  1 e 1 @15085 ]
+"46651
+[v _U1RXB U1RXB `VEuc  1 e 1 @15848 ]
+"46709
+[v _U1TXB U1TXB `VEuc  1 e 1 @15850 ]
+"46774
+[v _U1P1L U1P1L `VEuc  1 e 1 @15852 ]
+"46794
+[v _U1P1H U1P1H `VEuc  1 e 1 @15853 ]
+"46821
+[v _U1P2L U1P2L `VEuc  1 e 1 @15854 ]
+"46841
+[v _U1P2H U1P2H `VEuc  1 e 1 @15855 ]
+"46868
+[v _U1P3L U1P3L `VEuc  1 e 1 @15856 ]
+"46888
+[v _U1P3H U1P3H `VEuc  1 e 1 @15857 ]
+"46908
+[v _U1CON0 U1CON0 `VEuc  1 e 1 @15858 ]
+"47036
+[v _U1CON1 U1CON1 `VEuc  1 e 1 @15859 ]
+"47116
+[v _U1CON2 U1CON2 `VEuc  1 e 1 @15860 ]
+"47265
+[v _U1BRGL U1BRGL `VEuc  1 e 1 @15861 ]
+"47285
+[v _U1BRGH U1BRGH `VEuc  1 e 1 @15862 ]
+"47305
+[v _U1FIFO U1FIFO `VEuc  1 e 1 @15863 ]
+"47435
+[v _U1UIR U1UIR `VEuc  1 e 1 @15864 ]
+"47491
+[v _U1ERRIR U1ERRIR `VEuc  1 e 1 @15865 ]
+[s S599 . 1 `uc 1 TXCIF 1 0 :1:0 
+`uc 1 RXFOIF 1 0 :1:1 
+`uc 1 RXBKIF 1 0 :1:2 
+`uc 1 FERIF 1 0 :1:3 
+`uc 1 CERIF 1 0 :1:4 
+`uc 1 ABDOVF 1 0 :1:5 
+`uc 1 PERIF 1 0 :1:6 
+`uc 1 TXMTIF 1 0 :1:7 
+]
+"47518
+[s S608 . 1 `uc 1 U1TXCIF 1 0 :1:0 
+`uc 1 U1RXFOIF 1 0 :1:1 
+`uc 1 U1RXBKIF 1 0 :1:2 
+`uc 1 U1FERIF 1 0 :1:3 
+`uc 1 U1CERIF 1 0 :1:4 
+`uc 1 U1ABDOVF 1 0 :1:5 
+`uc 1 U1PERIF 1 0 :1:6 
+`uc 1 U1TXMTIF 1 0 :1:7 
+]
+"47518
+[u S617 . 1 `S599 1 . 1 0 `S608 1 . 1 0 ]
+"47518
+"47518
+[v _U1ERRIRbits U1ERRIRbits `VES617  1 e 1 @15865 ]
+"47603
+[v _U1ERRIE U1ERRIE `VEuc  1 e 1 @15866 ]
+[s S1468 . 1 `uc 1 P5TSEL 1 0 :2:0 
+`uc 1 P6TSEL 1 0 :2:2 
+`uc 1 P7TSEL 1 0 :2:4 
+`uc 1 P8TSEL 1 0 :2:6 
+]
+"60295
+[s S1473 . 1 `uc 1 P5TSEL0 1 0 :1:0 
+`uc 1 P5TSEL1 1 0 :1:1 
+`uc 1 P6TSEL0 1 0 :1:2 
+`uc 1 P6TSEL1 1 0 :1:3 
+`uc 1 P7TSEL0 1 0 :1:4 
+`uc 1 P7TSEL1 1 0 :1:5 
+`uc 1 P8TSEL0 1 0 :1:6 
+`uc 1 P8TSEL1 1 0 :1:7 
+]
+"60295
+[u S1482 . 1 `S1468 1 . 1 0 `S1473 1 . 1 0 ]
+"60295
+"60295
+[v _CCPTMRS1bits CCPTMRS1bits `VES1482  1 e 1 @16223 ]
+"60965
+[v _PWM6DCL PWM6DCL `VEuc  1 e 1 @16232 ]
+"61031
+[v _PWM6DCH PWM6DCH `VEuc  1 e 1 @16233 ]
+"61201
+[v _PWM6CON PWM6CON `VEuc  1 e 1 @16234 ]
+"61264
+[v _PWM5DCL PWM5DCL `VEuc  1 e 1 @16236 ]
+"61330
+[v _PWM5DCH PWM5DCH `VEuc  1 e 1 @16237 ]
+"61500
+[v _PWM5CON PWM5CON `VEuc  1 e 1 @16238 ]
+[s S1175 . 1 `uc 1 FILHIT0 1 0 :1:0 
+`uc 1 JTOFF_FILHIT1 1 0 :1:1 
+`uc 1 RB0DBEN_FILHIT2 1 0 :1:2 
+`uc 1 RXRTRRO_FILHIT3 1 0 :1:3 
+`uc 1 FILHIT4 1 0 :1:4 
+`uc 1 RXM0_RTRRO 1 0 :1:5 
+`uc 1 RXM1 1 0 :1:6 
+`uc 1 RXFUL 1 0 :1:7 
+]
+"62571
+[s S1184 . 1 `uc 1 FILHIT 1 0 :5:0 
+`uc 1 RTRRO 1 0 :1:5 
+]
+"62571
+[s S1187 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 FILHIT1 1 0 :1:1 
+`uc 1 FILHIT2 1 0 :1:2 
+`uc 1 FILHIT3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 RXM0 1 0 :1:5 
+]
+"62571
+[s S1194 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 JTOFF 1 0 :1:1 
+`uc 1 RB0DBEN 1 0 :1:2 
+`uc 1 RXRTRRO 1 0 :1:3 
+]
+"62571
+[u S1199 . 1 `S1175 1 . 1 0 `S1184 1 . 1 0 `S1187 1 . 1 0 `S1194 1 . 1 0 ]
+"62571
+"62571
+[v _RXB0CONbits RXB0CONbits `VES1199  1 e 1 @16256 ]
+"62661
+[v _RXB0SIDH RXB0SIDH `VEuc  1 e 1 @16257 ]
+"62781
+[v _RXB0SIDL RXB0SIDL `VEuc  1 e 1 @16258 ]
+"62874
+[v _RXB0EIDH RXB0EIDH `VEuc  1 e 1 @16259 ]
+"62944
+[v _RXB0EIDL RXB0EIDL `VEuc  1 e 1 @16260 ]
+"63014
+[v _RXB0DLC RXB0DLC `VEuc  1 e 1 @16261 ]
+"63128
+[v _RXB0D0 RXB0D0 `VEuc  1 e 1 @16262 ]
+"63198
+[v _RXB0D1 RXB0D1 `VEuc  1 e 1 @16263 ]
+"63268
+[v _RXB0D2 RXB0D2 `VEuc  1 e 1 @16264 ]
+"63338
+[v _RXB0D3 RXB0D3 `VEuc  1 e 1 @16265 ]
+"63408
+[v _RXB0D4 RXB0D4 `VEuc  1 e 1 @16266 ]
+"63478
+[v _RXB0D5 RXB0D5 `VEuc  1 e 1 @16267 ]
+"63548
+[v _RXB0D6 RXB0D6 `VEuc  1 e 1 @16268 ]
+"63618
+[v _RXB0D7 RXB0D7 `VEuc  1 e 1 @16269 ]
+"63688
+[v _CANSTAT CANSTAT `VEuc  1 e 1 @16270 ]
+"63816
+[v _CANCON CANCON `VEuc  1 e 1 @16271 ]
+[s S1312 . 1 `uc 1 EWARN 1 0 :1:0 
+`uc 1 RXWARN 1 0 :1:1 
+`uc 1 TXWARN 1 0 :1:2 
+`uc 1 RXBP 1 0 :1:3 
+`uc 1 TXBP 1 0 :1:4 
+`uc 1 TXBO 1 0 :1:5 
+`uc 1 RXB1OVFL 1 0 :1:6 
+`uc 1 RXB0OVFL 1 0 :1:7 
+]
+"63974
+[s S1321 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_FIFOEMPTY 1 0 :1:7 
+]
+"63974
+[s S1324 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 nFIFOEMPTY 1 0 :1:7 
+]
+"63974
+[s S1327 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RXBNOVFL 1 0 :1:6 
+`uc 1 FIFOEMPTY 1 0 :1:7 
+]
+"63974
+[u S1331 . 1 `S1312 1 . 1 0 `S1321 1 . 1 0 `S1324 1 . 1 0 `S1327 1 . 1 0 ]
+"63974
+"63974
+[v _COMSTATbits COMSTATbits `VES1331  1 e 1 @16272 ]
+"64039
+[v _ECANCON ECANCON `VEuc  1 e 1 @16273 ]
+"33 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\encoder.c
+[v _g_encoderRawCount g_encoderRawCount `VEl  1 s 4 g_encoderRawCount ]
+"34
+[v _g_encoderPrevAB g_encoderPrevAB `VEuc  1 s 1 g_encoderPrevAB ]
+"35
+[v _g_encoderPrevABValid g_encoderPrevABValid `VEa  1 s 1 g_encoderPrevABValid ]
+"29 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\master_axis_client.c
+[v _sequence sequence `uc  1 s 1 sequence ]
+"32
+[v _lastState lastState `[4]E22882  1 s 4 lastState ]
+"33
+[v _lastResult lastResult `[4]E22892  1 s 4 lastResult ]
+"34
+[v _lastFault lastFault `[4]E22902  1 s 4 lastFault ]
+"35
+[v _lastFlags lastFlags `[4]uc  1 s 4 lastFlags ]
+"38
+[v _masterToAxisId masterToAxisId `C[4]us  1 s 8 masterToAxisId ]
+"46
+[v _axisToMasterId axisToMasterId `C[4]us  1 s 8 axisToMasterId ]
+"54 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/pin_manager.c
+[v _IOCBF0_InterruptHandler IOCBF0_InterruptHandler `*.37(v  1 e 2 0 ]
+"55
+[v _IOCBF1_InterruptHandler IOCBF1_InterruptHandler `*.37(v  1 e 2 0 ]
+"56
+[v _IOCBF2_InterruptHandler IOCBF2_InterruptHandler `*.37(v  1 e 2 0 ]
+"59 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/tmr0.c
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"58 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/tmr2.c
+[v _TMR2_InterruptHandler TMR2_InterruptHandler `*.37(v  1 e 2 0 ]
+"63 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/uart1.c
+[v _uart1TxHead uart1TxHead `VEuc  1 s 1 uart1TxHead ]
+"64
+[v _uart1TxTail uart1TxTail `VEuc  1 s 1 uart1TxTail ]
+"65
+[v _uart1TxBuffer uart1TxBuffer `VE[64]uc  1 s 64 uart1TxBuffer ]
+"66
+[v _uart1TxBufferRemaining uart1TxBufferRemaining `VEuc  1 e 1 0 ]
+[s S490 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"68
+[u S495 . 1 `S490 1 . 1 0 `uc 1 status 1 0 ]
+[v _uart1RxLastError uart1RxLastError `VES495  1 s 1 uart1RxLastError ]
+"73
+[v _UART1_FramingErrorHandler UART1_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"74
+[v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"75
+[v _UART1_ErrorHandler UART1_ErrorHandler `*.37(v  1 e 2 0 ]
+"13 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\millisecond_timers.c
+[v _milliseconds milliseconds `VE[7]ul  1 e 28 0 ]
+"14
+[v _activeTimersCount activeTimersCount `VEuc  1 e 1 0 ]
+"16
+[v _millisecondsVar millisecondsVar `VEul  1 e 4 0 ]
+"50 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\motor.c
+[v _g_motorStepEnabled g_motorStepEnabled `VEa  1 s 1 g_motorStepEnabled ]
+"51
+[v _g_motorTicksPerStep g_motorTicksPerStep `VEus  1 s 2 g_motorTicksPerStep ]
+"52
+[v _g_motorTickCounter g_motorTickCounter `VEus  1 s 2 g_motorTickCounter ]
+"53
+[v _g_motorStepIndex g_motorStepIndex `VEuc  1 s 1 g_motorStepIndex ]
+"54
+[v _g_motorDirection g_motorDirection `VEE36  1 s 1 g_motorDirection ]
+"55
+[v _g_motorStepMode g_motorStepMode `VEE46  1 s 1 g_motorStepMode ]
+"41 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"86
+} 0
+"27
+[v _send_and_blink send_and_blink `(v  1 s 1 send_and_blink ]
+{
+[v send_and_blink@cmd cmd `E23500  1 a 1 wreg ]
+"29
+[v send_and_blink@ok ok `a  1 a 1 85 ]
+"27
+[v send_and_blink@cmd cmd `E23500  1 a 1 wreg ]
+[v send_and_blink@value value `f  1 p 4 80 ]
+"31
+[v send_and_blink@cmd cmd `E23500  1 a 1 84 ]
+"39
+} 0
+"13
+[v _pulse_ok_led pulse_ok_led `(v  1 s 1 pulse_ok_led ]
+{
+"18
+} 0
+"20
+[v _pulse_err_led pulse_err_led `(v  1 s 1 pulse_err_led ]
+{
+"25
+} 0
+"223 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\master_axis_client.c
+[v _MASTER_AXIS_CLIENT_SendCommand MASTER_AXIS_CLIENT_SendCommand `(a  1 e 1 0 ]
+{
+[v MASTER_AXIS_CLIENT_SendCommand@axisId axisId `E23094  1 a 1 wreg ]
+[s S2083 . 6 `E23013 1 commandEcho 1 0 `uc 1 sequenceEcho 1 1 `E22892 1 result 1 2 `E22882 1 state 1 3 `E22902 1 faultCode 1 4 `uc 1 flags 1 5 ]
+"225
+[v MASTER_AXIS_CLIENT_SendCommand@responseFrame responseFrame `S2083  1 a 6 10 ]
+[s S2047 . 6 `E23013 1 command 1 0 `uc 1 sequence 1 1 `f 1 value 4 2 ]
+"224
+[v MASTER_AXIS_CLIENT_SendCommand@commandFrame commandFrame `S2047  1 a 6 3 ]
+"227
+[v MASTER_AXIS_CLIENT_SendCommand@retry retry `uc  1 a 1 2 ]
+"228
+[v MASTER_AXIS_CLIENT_SendCommand@thisSequence thisSequence `uc  1 a 1 1 ]
+"226
+[v MASTER_AXIS_CLIENT_SendCommand@canResult canResult `E23055  1 a 1 0 ]
+"223
+[v MASTER_AXIS_CLIENT_SendCommand@axisId axisId `E23094  1 a 1 wreg ]
+[v MASTER_AXIS_CLIENT_SendCommand@command command `E23013  1 p 1 75 ]
+[v MASTER_AXIS_CLIENT_SendCommand@value value `f  1 p 4 76 ]
+"230
+[v MASTER_AXIS_CLIENT_SendCommand@axisId axisId `E23094  1 a 1 9 ]
+"280
+} 0
+"192
+[v _MASTER_AXIS_CLIENT_WaitUntilReadyForMove MASTER_AXIS_CLIENT_WaitUntilReadyForMove `(a  1 s 1 MASTER_AXIS_CLIENT_WaitUntilReadyForMove ]
+{
+[v MASTER_AXIS_CLIENT_WaitUntilReadyForMove@axisId axisId `E23094  1 a 1 wreg ]
+"193
+[v MASTER_AXIS_CLIENT_WaitUntilReadyForMove@i i `uc  1 a 1 74 ]
+"192
+[v MASTER_AXIS_CLIENT_WaitUntilReadyForMove@axisId axisId `E23094  1 a 1 wreg ]
+"195
+[v MASTER_AXIS_CLIENT_WaitUntilReadyForMove@axisId axisId `E23094  1 a 1 73 ]
+"205
+} 0
+"166
+[v _MASTER_AXIS_CLIENT_RequestStatusOnce MASTER_AXIS_CLIENT_RequestStatusOnce `(a  1 s 1 MASTER_AXIS_CLIENT_RequestStatusOnce ]
+{
+[v MASTER_AXIS_CLIENT_RequestStatusOnce@axisId axisId `E23094  1 a 1 wreg ]
+[s S2083 . 6 `E23013 1 commandEcho 1 0 `uc 1 sequenceEcho 1 1 `E22892 1 result 1 2 `E22882 1 state 1 3 `E22902 1 faultCode 1 4 `uc 1 flags 1 5 ]
+"168
+[v MASTER_AXIS_CLIENT_RequestStatusOnce@responseFrame responseFrame `S2083  1 a 6 65 ]
+[s S2047 . 6 `E23013 1 command 1 0 `uc 1 sequence 1 1 `f 1 value 4 2 ]
+"167
+[v MASTER_AXIS_CLIENT_RequestStatusOnce@commandFrame commandFrame `S2047  1 a 6 59 ]
+"170
+[v MASTER_AXIS_CLIENT_RequestStatusOnce@thisSequence thisSequence `uc  1 a 1 57 ]
+"169
+[v MASTER_AXIS_CLIENT_RequestStatusOnce@canResult canResult `E23055  1 a 1 56 ]
+"166
+[v MASTER_AXIS_CLIENT_RequestStatusOnce@axisId axisId `E23094  1 a 1 wreg ]
+"172
+[v MASTER_AXIS_CLIENT_RequestStatusOnce@axisId axisId `E23094  1 a 1 58 ]
+"186
+} 0
+"121
+[v _MASTER_AXIS_CLIENT_WaitForAck MASTER_AXIS_CLIENT_WaitForAck `(a  1 s 1 MASTER_AXIS_CLIENT_WaitForAck ]
+{
+[v MASTER_AXIS_CLIENT_WaitForAck@axisId axisId `E23094  1 a 1 wreg ]
+"122
+[v MASTER_AXIS_CLIENT_WaitForAck@received received `a  1 a 1 55 ]
+"123
+[v MASTER_AXIS_CLIENT_WaitForAck@waitCount waitCount `uc  1 a 1 54 ]
+"124
+[v MASTER_AXIS_CLIENT_WaitForAck@canResult canResult `E23055  1 a 1 53 ]
+"121
+[v MASTER_AXIS_CLIENT_WaitForAck@axisId axisId `E23094  1 a 1 wreg ]
+[v MASTER_AXIS_CLIENT_WaitForAck@expectedSequence expectedSequence `uc  1 p 1 48 ]
+[s S2083 . 6 `E23013 1 commandEcho 1 0 `uc 1 sequenceEcho 1 1 `E22892 1 result 1 2 `E22882 1 state 1 3 `E22902 1 faultCode 1 4 `uc 1 flags 1 5 ]
+[v MASTER_AXIS_CLIENT_WaitForAck@response response `*.39S2083  1 p 2 49 ]
+"126
+[v MASTER_AXIS_CLIENT_WaitForAck@axisId axisId `E23094  1 a 1 52 ]
+"148
+} 0
+"85
+[v _MASTER_AXIS_CLIENT_UpdateFromResponse MASTER_AXIS_CLIENT_UpdateFromResponse `(v  1 s 1 MASTER_AXIS_CLIENT_UpdateFromResponse ]
+{
+[v MASTER_AXIS_CLIENT_UpdateFromResponse@axisId axisId `E23094  1 a 1 wreg ]
+[v MASTER_AXIS_CLIENT_UpdateFromResponse@axisId axisId `E23094  1 a 1 wreg ]
+[s S2083 . 6 `E23013 1 commandEcho 1 0 `uc 1 sequenceEcho 1 1 `E22892 1 result 1 2 `E22882 1 state 1 3 `E22902 1 faultCode 1 4 `uc 1 flags 1 5 ]
+[v MASTER_AXIS_CLIENT_UpdateFromResponse@response response `*.39CS2083  1 p 2 3 ]
+[v MASTER_AXIS_CLIENT_UpdateFromResponse@axisId axisId `E23094  1 a 1 5 ]
+"93
+} 0
+"95
+[v _MASTER_AXIS_CLIENT_PrintResponse MASTER_AXIS_CLIENT_PrintResponse `(v  1 s 1 MASTER_AXIS_CLIENT_PrintResponse ]
+{
+[s S2083 . 6 `E23013 1 commandEcho 1 0 `uc 1 sequenceEcho 1 1 `E22892 1 result 1 2 `E22882 1 state 1 3 `E22902 1 faultCode 1 4 `uc 1 flags 1 5 ]
+[v MASTER_AXIS_CLIENT_PrintResponse@response response `*.39CS2083  1 p 2 16 ]
+"115
+} 0
+"135 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\uart_print.c
+[v _send_string send_string `(v  1 e 1 0 ]
+{
+[v send_string@p p `*.32uc  1 p 2 2 ]
+"141
+} 0
+"115
+[v _send_int16_as_str_to_uart send_int16_as_str_to_uart `(v  1 e 1 0 ]
+{
+[v send_int16_as_str_to_uart@number number `s  1 p 2 14 ]
+"126
+} 0
+"45
+[v _send_uint16_as_str_to_uart send_uint16_as_str_to_uart `(v  1 e 1 0 ]
+{
+"47
+[v send_uint16_as_str_to_uart@curr_char curr_char `uc  1 a 1 13 ]
+"48
+[v send_uint16_as_str_to_uart@sending sending `uc  1 a 1 12 ]
+"45
+[v send_uint16_as_str_to_uart@number number `s  1 p 2 10 ]
+"80
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 7 ]
+[v ___awmod@counter counter `uc  1 a 1 6 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+[v ___awmod@divisor divisor `i  1 p 2 4 ]
+"34
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 8 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 7 ]
+[v ___awdiv@counter counter `uc  1 a 1 6 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+[v ___awdiv@divisor divisor `i  1 p 2 4 ]
+"41
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 6 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 2 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 4 ]
+"53
+} 0
+"159 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\can_protocol.c
+[v _CAN_PROTOCOL_TryReadResponse CAN_PROTOCOL_TryReadResponse `(E23055  1 e 1 0 ]
+{
+[s S1033 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
+"162
+[u S1045 . 14 `S1033 1 frame 14 0 `[14]uc 1 array 14 0 ]
+[v CAN_PROTOCOL_TryReadResponse@msg msg `S1045  1 a 14 34 ]
+"159
+[v CAN_PROTOCOL_TryReadResponse@expectedCanId expectedCanId `us  1 p 2 24 ]
+[s S2083 . 6 `E23013 1 commandEcho 1 0 `uc 1 sequenceEcho 1 1 `E22892 1 result 1 2 `E22882 1 state 1 3 `E22902 1 faultCode 1 4 `uc 1 flags 1 5 ]
+"160
+[v CAN_PROTOCOL_TryReadResponse@response response `*.39S2083  1 p 2 26 ]
+"161
+[v CAN_PROTOCOL_TryReadResponse@receved receved `*.39a  1 p 2 28 ]
+"183
+} 0
+"237 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/ecan.c
+[v _CAN_receive CAN_receive `(uc  1 e 1 0 ]
+{
+"239
+[v CAN_receive@returnValue returnValue `uc  1 a 1 23 ]
+[s S1033 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
+"237
+[u S1045 . 14 `S1033 1 frame 14 0 `[14]uc 1 array 14 0 ]
+[v CAN_receive@tempCanMsg tempCanMsg `*.39S1045  1 p 2 21 ]
+"297
+} 0
+"383
+[v _convertReg2StandardCANid convertReg2StandardCANid `(ul  1 s 4 convertReg2StandardCANid ]
+{
+[v convertReg2StandardCANid@tempRXBn_SIDH tempRXBn_SIDH `uc  1 a 1 wreg ]
+"386
+[v convertReg2StandardCANid@ConvertedID ConvertedID `ul  1 a 4 13 ]
+"385
+[v convertReg2StandardCANid@returnValue returnValue `ul  1 a 4 9 ]
+"383
+[v convertReg2StandardCANid@tempRXBn_SIDH tempRXBn_SIDH `uc  1 a 1 wreg ]
+[v convertReg2StandardCANid@tempRXBn_SIDL tempRXBn_SIDL `uc  1 p 1 2 ]
+[v convertReg2StandardCANid@tempRXBn_SIDH tempRXBn_SIDH `uc  1 a 1 8 ]
+"394
+} 0
+"362
+[v _convertReg2ExtendedCANid convertReg2ExtendedCANid `(ul  1 s 4 convertReg2ExtendedCANid ]
+{
+[v convertReg2ExtendedCANid@tempRXBn_EIDH tempRXBn_EIDH `uc  1 a 1 wreg ]
+"365
+[v convertReg2ExtendedCANid@ConvertedID ConvertedID `ul  1 a 4 17 ]
+"364
+[v convertReg2ExtendedCANid@returnValue returnValue `ul  1 a 4 11 ]
+"367
+[v convertReg2ExtendedCANid@CAN_standardLo_ID_hi3bits CAN_standardLo_ID_hi3bits `uc  1 a 1 16 ]
+"366
+[v convertReg2ExtendedCANid@CAN_standardLo_ID_lo2bits CAN_standardLo_ID_lo2bits `uc  1 a 1 15 ]
+"362
+[v convertReg2ExtendedCANid@tempRXBn_EIDH tempRXBn_EIDH `uc  1 a 1 wreg ]
+[v convertReg2ExtendedCANid@tempRXBn_EIDL tempRXBn_EIDL `uc  1 p 1 2 ]
+[v convertReg2ExtendedCANid@tempRXBn_SIDH tempRXBn_SIDH `uc  1 p 1 3 ]
+[v convertReg2ExtendedCANid@tempRXBn_SIDL tempRXBn_SIDL `uc  1 p 1 4 ]
+"365
+[v convertReg2ExtendedCANid@tempRXBn_EIDH tempRXBn_EIDH `uc  1 a 1 10 ]
+"381
+} 0
+"74 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\can_protocol.c
+[v _CAN_PROTOCOL_SendCommand CAN_PROTOCOL_SendCommand `(E23055  1 e 1 0 ]
+{
+[s S1033 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
+"76
+[u S1045 . 14 `S1033 1 frame 14 0 `[14]uc 1 array 14 0 ]
+[v CAN_PROTOCOL_SendCommand@msg msg `S1045  1 a 14 35 ]
+"77
+[v CAN_PROTOCOL_SendCommand@valueBytes valueBytes `[4]uc  1 a 4 31 ]
+"74
+[v CAN_PROTOCOL_SendCommand@canId canId `us  1 p 2 27 ]
+[s S2047 . 6 `E23013 1 command 1 0 `uc 1 sequence 1 1 `f 1 value 4 2 ]
+"75
+[v CAN_PROTOCOL_SendCommand@command command `*.39CS2047  1 p 2 29 ]
+"99
+} 0
+"159 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/ecan.c
+[v _CAN_transmit CAN_transmit `(uc  1 e 1 0 ]
+{
+"163
+[v CAN_transmit@tempSIDL tempSIDL `uc  1 a 1 26 ]
+"162
+[v CAN_transmit@tempSIDH tempSIDH `uc  1 a 1 25 ]
+"161
+[v CAN_transmit@tempEIDL tempEIDL `uc  1 a 1 24 ]
+"160
+[v CAN_transmit@tempEIDH tempEIDH `uc  1 a 1 23 ]
+"165
+[v CAN_transmit@returnValue returnValue `uc  1 a 1 22 ]
+[s S1033 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
+"159
+[u S1045 . 14 `S1033 1 frame 14 0 `[14]uc 1 array 14 0 ]
+[v CAN_transmit@tempCanMsg tempCanMsg `*.39S1045  1 p 2 20 ]
+"235
+} 0
+"396
+[v _convertCANid2Reg convertCANid2Reg `(v  1 s 1 convertCANid2Reg ]
+{
+"398
+[v convertCANid2Reg@wipSIDL wipSIDL `uc  1 a 1 19 ]
+"396
+[v convertCANid2Reg@tempPassedInID tempPassedInID `ul  1 p 4 2 ]
+[v convertCANid2Reg@canIdType canIdType `uc  1 p 1 6 ]
+[v convertCANid2Reg@passedInEIDH passedInEIDH `*.39uc  1 p 2 7 ]
+[v convertCANid2Reg@passedInEIDL passedInEIDL `*.39uc  1 p 2 9 ]
+[v convertCANid2Reg@passedInSIDH passedInSIDH `*.39uc  1 p 2 11 ]
+[v convertCANid2Reg@passedInSIDL passedInSIDL `*.39uc  1 p 2 13 ]
+"431
+} 0
+"24 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\can_protocol.c
+[v _CAN_PROTOCOL_FloatToBytes CAN_PROTOCOL_FloatToBytes `(v  1 s 1 CAN_PROTOCOL_FloatToBytes ]
+{
+[u S1987 . 4 `f 1 f 4 0 `[4]uc 1 b 4 0 ]
+"28
+[v CAN_PROTOCOL_FloatToBytes@converter converter `S1987  1 a 4 8 ]
+"24
+[v CAN_PROTOCOL_FloatToBytes@value value `f  1 p 4 2 ]
+[v CAN_PROTOCOL_FloatToBytes@bytes bytes `*.39uc  1 p 2 6 ]
+"36
+} 0
+"151 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\master_axis_client.c
+[v _MASTER_AXIS_CLIENT_IsReadyForMove MASTER_AXIS_CLIENT_IsReadyForMove `(a  1 s 1 MASTER_AXIS_CLIENT_IsReadyForMove ]
+{
+[v MASTER_AXIS_CLIENT_IsReadyForMove@axisId axisId `E23094  1 a 1 wreg ]
+"152
+[v MASTER_AXIS_CLIENT_IsReadyForMove@flags flags `uc  1 a 1 4 ]
+"151
+[v MASTER_AXIS_CLIENT_IsReadyForMove@axisId axisId `E23094  1 a 1 wreg ]
+"154
+[v MASTER_AXIS_CLIENT_IsReadyForMove@axisId axisId `E23094  1 a 1 3 ]
+"164
+} 0
+"53
+[v _MASTER_AXIS_CLIENT_IsAxisValid MASTER_AXIS_CLIENT_IsAxisValid `(a  1 s 1 MASTER_AXIS_CLIENT_IsAxisValid ]
+{
+[v MASTER_AXIS_CLIENT_IsAxisValid@axisId axisId `E23094  1 a 1 wreg ]
+[v MASTER_AXIS_CLIENT_IsAxisValid@axisId axisId `E23094  1 a 1 wreg ]
+[v MASTER_AXIS_CLIENT_IsAxisValid@axisId axisId `E23094  1 a 1 2 ]
+"55
+} 0
+"62
+[v _MASTER_AXIS_CLIENT_IsCommandValid MASTER_AXIS_CLIENT_IsCommandValid `(a  1 s 1 MASTER_AXIS_CLIENT_IsCommandValid ]
+{
+[v MASTER_AXIS_CLIENT_IsCommandValid@command command `E23013  1 a 1 wreg ]
+[v MASTER_AXIS_CLIENT_IsCommandValid@command command `E23013  1 a 1 wreg ]
+[v MASTER_AXIS_CLIENT_IsCommandValid@command command `E23013  1 a 1 4 ]
+"83
+} 0
+"57
+[v _MASTER_AXIS_CLIENT_CommandMove MASTER_AXIS_CLIENT_CommandMove `(a  1 s 1 MASTER_AXIS_CLIENT_CommandMove ]
+{
+[v MASTER_AXIS_CLIENT_CommandMove@command command `E23013  1 a 1 wreg ]
+[v MASTER_AXIS_CLIENT_CommandMove@command command `E23013  1 a 1 wreg ]
+[v MASTER_AXIS_CLIENT_CommandMove@command command `E23013  1 a 1 3 ]
+"60
+} 0
+"50 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"62
+} 0
+"81 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+{
+"145
+} 0
+"260
+[v _UART1_SetTxInterruptHandler UART1_SetTxInterruptHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetTxInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"262
+} 0
+"249
+[v _UART1_SetOverrunErrorHandler UART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
+"251
+} 0
+"245
+[v _UART1_SetFramingErrorHandler UART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
+"247
+} 0
+"253
+[v _UART1_SetErrorHandler UART1_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
+"255
+} 0
+"64 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"193
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"195
+} 0
+"61 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"142
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"144
+} 0
+"58 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/pwm6.c
+[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"58 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/pwm5.c
+[v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"78 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"96
+} 0
+"59 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"152
+} 0
+"251
+[v _IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"253
+} 0
+"221
+[v _IOCBF1_SetInterruptHandler IOCBF1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"223
+} 0
+"191
+[v _IOCBF0_SetInterruptHandler IOCBF0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"193
+} 0
+"64 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"76
+} 0
+"52 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"63 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/ecan.c
+[v _ECAN_Initialize ECAN_Initialize `(v  1 e 1 0 ]
+{
+"146
+} 0
+"207 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\master_axis_client.c
+[v _MASTER_AXIS_CLIENT_Init MASTER_AXIS_CLIENT_Init `(v  1 e 1 0 ]
+{
+"208
+[v MASTER_AXIS_CLIENT_Init@id id `uc  1 a 1 2 ]
+"216
+} 0
+"74 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
+{
+"94
+} 0
+"217 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/uart1.c
+[v _UART1_Transmit_ISR UART1_Transmit_ISR `(v  1 e 1 0 ]
+{
+"235
+} 0
+"165 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/tmr2.c
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+{
+"167
+[v TMR2_ISR@CountCallBack CountCallBack `VEui  1 s 2 CountCallBack ]
+"181
+} 0
+"183
+[v _TMR2_CallBack TMR2_CallBack `(v  1 e 1 0 ]
+{
+"191
+} 0
+"197
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"200
+} 0
+"121 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"130
+} 0
+"132
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
+{
+"140
+} 0
+"146
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"149
+} 0
+"154 C:\Users\acer\Desktop\CAN_Leksell_Stepper.X\masterstep.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+{
+"171
+} 0
+"236
+[v _IOCBF2_ISR IOCBF2_ISR `(v  1 e 1 0 ]
+{
+"246
+} 0
+"258
+[v _IOCBF2_DefaultInterruptHandler IOCBF2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"261
+} 0
+"206
+[v _IOCBF1_ISR IOCBF1_ISR `(v  1 e 1 0 ]
+{
+"216
+} 0
+"228
+[v _IOCBF1_DefaultInterruptHandler IOCBF1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"231
+} 0
+"176
+[v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
+{
+"186
+} 0
+"198
+[v _IOCBF0_DefaultInterruptHandler IOCBF0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"201
+} 0
