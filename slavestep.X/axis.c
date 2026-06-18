@@ -64,7 +64,7 @@ void AXIS_LoadDefaultConfig(AXIS_Config_t *config) { //promeni ja sprjamo povede
     config->minTravelMm = 0.0f;
     config->maxTravelMm = 140.0f;
     config->stepsPerMm = 500.0f;
-    config->positionToleranceMm = 0.30f;
+    config->positionToleranceMm = 0.05f;
     config->fastZoneMm = 5.0f;
 
     config->moveSpeedFastHz = 489u;
@@ -75,7 +75,7 @@ void AXIS_LoadDefaultConfig(AXIS_Config_t *config) { //promeni ja sprjamo povede
     config->homingBackoffSpeedHz = 489u;
 
     config->homingVerifyDistanceMm = 5.0f;
-    config->homingFinalBackoffMm = 20.0f;
+    config->homingFinalBackoffMm = 0.0f;
     
     /* Minimum travel required before a stall condition may be
    interpreted as successful reference detection. */
@@ -456,7 +456,7 @@ static bool AXIS_IsConfigurationValid(const AXIS_Config_t *config) {
     
     if (config->homingVerifyDistanceMm <= 0.0f) return false;
     
-    if (config->homingFinalBackoffMm <= 0.0f) return false;
+    if (config->homingFinalBackoffMm < 0.0f) return false;
     
     if (config->homingRequiredDetections == 0u) return false;
     

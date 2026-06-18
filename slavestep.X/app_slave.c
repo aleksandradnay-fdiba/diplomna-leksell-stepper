@@ -19,6 +19,8 @@
 #include "app_config.h"
 #include "slave_node.h"
 
+#include "validation_log.h"
+
 #include "axis.h"
 #include "motor.h"
 #include "encoder.h"
@@ -36,6 +38,24 @@ static AXIS_t axis;
 static MOTOR_t motor;
 static ENCODER_t encoder;
 static SLAVE_NODE_t slaveNode;
+
+typedef enum {
+    VALIDATION_IDLE = 0,
+    VALIDATION_START_HOME,
+    VALIDATION_WAIT_HOME,
+    VALIDATION_START_MOVE,
+    VALIDATION_WAIT_MOVE,
+    VALIDATION_LOG_RESULT,
+    VALIDATION_FINISHED
+} VALIDATION_State_t;
+
+static VALIDATION_State_t validationState = VALIDATION_IDLE;
+static uint8_t validationRep = 0u;
+static int32_t validationHomeRaw = 0;
+static float validationHomeMm = 0.0f;
+
+#define VALIDATION_REPETITIONS 5u
+#define VALIDATION_TARGET_MM   40.0f
 
 /* Provides a short visual indication for successful CAN response transmission. */
 static void SLAVE_APP_PulseOkLed(void) {
@@ -104,13 +124,110 @@ void SLAVE_APP_Initialise(void) {
     SLAVE_NODE_Initialise(&slaveNode, &axis);
 }
 
+static void APP_RunValidationTest(void)
+{
+    int32_t finalRaw;
+    float finalMm;
+
+    switch (validationState)
+    {
+        case VALIDATION_IDLE:
+        {
+            VALIDATION_LOG_Clear();
+            validationRep = 0u;
+            validationState = VALIDATION_START_HOME;
+            break;
+        }
+
+        case VALIDATION_START_HOME:
+        {
+            if (AXIS_Home(&axis) == AXIS_OK)
+            {
+                validationState = VALIDATION_WAIT_HOME;
+            }
+            else
+            {
+                validationState = VALIDATION_FINISHED;
+            }
+            break;
+        }
+
+        case VALIDATION_WAIT_HOME:
+        {
+            if (AXIS_GetState(&axis) == AXIS_STATE_READY)
+            {
+                validationHomeRaw = ENCODER_GetRawCount(&encoder);
+                validationHomeMm = ENCODER_GetPositionMm(&encoder);
+                validationState = VALIDATION_START_MOVE;
+            }
+            break;
+        }
+
+        case VALIDATION_START_MOVE:
+        {
+            if (AXIS_MoveToMm(&axis, VALIDATION_TARGET_MM) == AXIS_OK)
+            {
+                validationState = VALIDATION_WAIT_MOVE;
+            }
+            else
+            {
+                validationState = VALIDATION_FINISHED;
+            }
+            break;
+        }
+
+        case VALIDATION_WAIT_MOVE:
+        {
+            if (AXIS_GetState(&axis) == AXIS_STATE_READY)
+            {
+                validationState = VALIDATION_LOG_RESULT;
+            }
+            break;
+        }
+
+        case VALIDATION_LOG_RESULT:
+        {
+            finalRaw = ENCODER_GetRawCount(&encoder);
+            finalMm = ENCODER_GetPositionMm(&encoder);
+
+            VALIDATION_LOG_Add(1u,
+                               validationRep + 1u,
+                               VALIDATION_TARGET_MM,
+                               validationHomeRaw,
+                               validationHomeMm,
+                               finalRaw,
+                               finalMm);
+
+            validationRep++;
+
+            if (validationRep >= VALIDATION_REPETITIONS)
+            {
+                validationState = VALIDATION_FINISHED;
+            }
+            else
+            {
+                validationState = VALIDATION_START_HOME;
+            }
+
+            break;
+        }
+
+        case VALIDATION_FINISHED:
+        default:
+        {
+            break;
+        }
+    }
+}
+
 void SLAVE_APP_Task(void) {
     CAN_PROTOCOL_CommandFrame_t command;
     CAN_PROTOCOL_Result_t canResult;
     AXIS_Result_t axisResult;
     bool received = false;
-
+    
     AXIS_Task(&axis);
+    APP_RunValidationTest();
 
     canResult = CAN_PROTOCOL_TryReadCommand(
                     CAN_ID_MASTER_TO_AXIS_Y_L,

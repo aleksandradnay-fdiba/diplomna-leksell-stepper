@@ -5,9 +5,6 @@ void main(void)
 {
     SYSTEM_Initialize();
 
-    INTERRUPT_GlobalInterruptHighEnable();
-    INTERRUPT_GlobalInterruptLowEnable();
-
     SLAVE_APP_Initialise();
 
     while (1)
@@ -15,4 +12,3 @@ void main(void)
         SLAVE_APP_Task();
     }
 }
-
