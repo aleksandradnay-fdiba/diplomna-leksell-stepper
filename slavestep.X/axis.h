@@ -135,6 +135,7 @@ AXIS_Result_t AXIS_SetConfig(AXIS_t *axis, const AXIS_Config_t *config);
 
 /* Periodic state-machine execution */
 void AXIS_Task(AXIS_t *axis);
+void AXIS_TestForceHomed(AXIS_t *axis);
 
 /* Motion-control commands */
 AXIS_Result_t AXIS_Home(AXIS_t *axis);

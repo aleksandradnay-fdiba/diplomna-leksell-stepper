@@ -100,14 +100,6 @@ void SLAVE_APP_Initialise(void) {
     /*
      * Temporary homing bypass for movement/CAN validation.
      */
-    axis.homed = true;
-    axis.state = AXIS_STATE_READY;
-
-    ENCODER_SetZero(&encoder);
-
-    axis.currentPositionMm = 0.0f;
-    axis.targetPositionMm = 0.0f;
-    axis.positionDeltaMm = 0.0f;
 
     SLAVE_NODE_Initialise(&slaveNode, &axis);
 }

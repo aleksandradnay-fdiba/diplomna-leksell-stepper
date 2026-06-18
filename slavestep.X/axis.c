@@ -26,7 +26,7 @@
 #define AXIS_ENABLE_SIMULATION (0u)
 
 #define AXIS_HOMING_STALL_TIMEOUT_MS      (200u)
-#define AXIS_HOMING_STALL_MIN_COUNTS      (2)
+#define AXIS_HOMING_STALL_MIN_COUNTS      (5)
 
 
 /* Internal helper function declarations */
@@ -70,19 +70,19 @@ void AXIS_LoadDefaultConfig(AXIS_Config_t *config) { //promeni ja sprjamo povede
     config->moveSpeedFastHz = 489u;
     config->moveSpeedSlowHz = 300u;
     
-    config->homingSeekSpeedHz = 30u;
-    config->homingReleaseSpeedHz = 30u;
-    config->homingBackoffSpeedHz = 30u;
+    config->homingSeekSpeedHz = 489u;
+    config->homingReleaseSpeedHz = 489u;
+    config->homingBackoffSpeedHz = 489u;
 
-    config->homingVerifyDistanceMm = 1.0f;
-    config->homingFinalBackoffMm = 1.0f;
+    config->homingVerifyDistanceMm = 5.0f;
+    config->homingFinalBackoffMm = 20.0f;
     
     /* Minimum travel required before a stall condition may be
    interpreted as successful reference detection. */
     config->homingMinSeekTravelMm = 0.5f;
-    config->homingRequiredDetections = 2u;
+    config->homingRequiredDetections = 1u;
     config->homingTimeoutMs = 10000u;
-    config->homingSettleTicks = 30u;
+    config->homingSettleTicks = 3u;
 
     config->positiveMoveDirection = MOTOR_DIRECTION_POSITIVE;
     config->homeSeekDirection = MOTOR_DIRECTION_NEGATIVE;
@@ -277,10 +277,10 @@ AXIS_Result_t AXIS_Home(AXIS_t *axis) {
     axis->homingSeekStartPosMm = axis->currentPositionMm;
     axis->homingSeekMotionVerified = false;
     
-    axis->homingLastRawCount = ENCODER_GetRawCount(axis->encoder);
     axis->homingLastMotionMs = millis();
-    axis->homingStallDetectionArmed = false;
+    axis->homingLastRawCount = ENCODER_GetRawCount(axis->encoder);
     axis->homingNoMotionTicks = 0u;
+    axis->homingStallDetectionArmed = true;
     axis->homingWaitTicks = 0u;
     
     axis->state = AXIS_STATE_HOMING;
@@ -562,7 +562,7 @@ static bool AXIS_IsEncoderMotionStopped(AXIS_t *axis) {
     }
      axis->homingNoMotionTicks++;
     
-    if (axis->homingNoMotionTicks >= 20u) return true;
+    if (axis->homingNoMotionTicks >= 5u) return true;
     
     return false;
 }
@@ -678,40 +678,19 @@ static void AXIS_HandleHoming(AXIS_t *axis) {
 }
 
 static void AXIS_HandleHomingSeekReference(AXIS_t *axis) {
-    float seekTravelMm;
-    
     AXIS_CommandMotor(axis,
                   axis->config.homeSeekDirection,
                   axis->config.homingSeekSpeedHz);
-    
-     
-    seekTravelMm = AXIS_GetHomingSeekTravelMm(axis);
-    
-    if(seekTravelMm > axis->config.positionToleranceMm) {
-        axis->homingSeekMotionVerified = true;
-        axis->homingStallDetectionArmed = true;
-    }
-    
-    if (axis->homingStallDetectionArmed) {
-        if (AXIS_IsEncoderMotionStopped(axis)) {
-            if(!axis->homingSeekMotionVerified) {
-                AXIS_SetFault(axis, AXIS_FAULT_REFERENCE_STUCK);
-                return;
-          }
-        
-            if(seekTravelMm < axis->config.homingMinSeekTravelMm) {
-                AXIS_SetFault(axis, AXIS_FAULT_REFERENCE_STUCK);
-                return;
-            }
-        
-            AXIS_StopMotor(axis);
-        
-            axis->homingDetectionCount = 0u;
-            axis->homingReleaseMotionVerified = false;
-           axis->homingSeekStartPosMm = axis->currentPositionMm;
-            
-           axis->homingStep = AXIS_HOMING_RELEASE_FROM_REFERENCE;
-        }
+
+    if (AXIS_IsEncoderMotionStopped(axis)) {
+        AXIS_StopMotor(axis);
+
+        axis->homingDetectionCount = 0u;
+        axis->homingReleaseMotionVerified = false;
+        axis->homingSeekStartPosMm = axis->currentPositionMm;
+        axis->homingNoMotionTicks = 0u;
+
+        axis->homingStep = AXIS_HOMING_RELEASE_FROM_REFERENCE;
     }
 }
 
@@ -749,45 +728,24 @@ static void AXIS_HandleHomingReleaseFromReference(AXIS_t *axis) {
 }
 
 static void AXIS_HandleHomingReapproachReference(AXIS_t *axis) {
-    
-    float seekTravelMm;
-    
     AXIS_CommandMotor(axis,
                   axis->config.homeSeekDirection,
                   axis->config.homingSeekSpeedHz);
-    
-    seekTravelMm = AXIS_GetHomingSeekTravelMm(axis);
-    
-     if (seekTravelMm > axis->config.positionToleranceMm) {
-        axis->homingSeekMotionVerified = true;
-        axis->homingStallDetectionArmed = true;
-    }
-    
-    if (axis->homingStallDetectionArmed) {
-        if (AXIS_IsEncoderMotionStopped(axis)) {
-            if (!axis->homingSeekMotionVerified) {
-                AXIS_SetFault(axis, AXIS_FAULT_REFERENCE_STUCK);
-                return;
-            }
-         
-            if (seekTravelMm < axis->config.homingMinSeekTravelMm) {
-                AXIS_SetFault(axis, AXIS_FAULT_REFERENCE_STUCK);
-                return;
-            }
-         
-            AXIS_StopMotor(axis);
-        
-            axis->homingDetectionCount++;
-        
-            if (axis->homingDetectionCount >= axis->config.homingRequiredDetections) {
-                axis->homingStep = AXIS_HOMING_ZERO_ENCODER;
-            }
-            else {
-                axis->homingReleaseMotionVerified = false;
-                axis->homingSeekStartPosMm = axis->currentPositionMm;
-                
-                axis->homingStep = AXIS_HOMING_RELEASE_FROM_REFERENCE;
-            }  
+
+    if (AXIS_IsEncoderMotionStopped(axis)) {
+        AXIS_StopMotor(axis);
+
+        axis->homingDetectionCount++;
+
+        if (axis->homingDetectionCount >= axis->config.homingRequiredDetections) {
+            axis->homingStep = AXIS_HOMING_ZERO_ENCODER;
+        }
+        else {
+            axis->homingReleaseMotionVerified = false;
+            axis->homingSeekStartPosMm = axis->currentPositionMm;
+            axis->homingNoMotionTicks = 0u;
+
+            axis->homingStep = AXIS_HOMING_RELEASE_FROM_REFERENCE;
         }
     }
 }
